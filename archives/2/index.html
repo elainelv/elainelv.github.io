@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          ElaineLv | 个人博客
+        
+    </title>
+
+    <link rel="canonical" href="http://elainelv.top/archives/2/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('img/header_img/building.jpg') 
+            /*config*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/BeanTechSign-white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>ElaineLv</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">个人博客</span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">ElaineLv</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/recommend/">推荐阅读</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/paperlist/">论文小书单</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/SSD/多流SSD介绍/">
+        <h2 class="post-title">
+            [Multi-stream]The Multi-streamed Solid-State Drive
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            最先由三星公司提出的多流SSD技术，这篇主要介绍多流SSD
+原文链接
+PPT
+作者报告视频
+
+
+最近在看Multi-Stream SSD方面的paper，比如上一篇博文中提到的FStream和vStream等等，了解了他们的ideas后，我们也有新的ideas。尝试着改代码！昨晚有了点思绪后，今天改了好多但是后来发现还是存在很多的问题，没法继续改下去了……
+明天去参加2018中国存储与数据峰......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-12-10
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#Multi-stream" title="Multi-stream">Multi-stream</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/SSD/两篇有关File_System/">
+        <h2 class="post-title">
+            [Multi-Stream]多流SSD的相关paper
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+FStream: Managing Flash Streams in the File System
+PPT
+High-Performance Transaction Processing in Journaling File Systems
+PPT
+vStream Virtual Stream Management for Multi-streamed SSDs
+
+
+多流ssd笔记
+对于......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-12-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#File System" title="File System">File System</a>
+            
+              <a href="/tags/#Muti-stream SSD" title="Muti-stream SSD">Muti-stream SSD</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/SSD/三篇SSD+整理/">
+        <h2 class="post-title">
+            [SSD]最新SSD Paper
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+记录我在阅读SSDsim源码过程中遇到的问题和一些比较重要的知识点
+简要介绍最近阅读的三篇论文所做的工作
+
+
+
+之前写的两篇博文都是介绍了ssd内部结构，并提出方法来提高ssd性能问题。这一礼拜看了ssdsim改进后的源码和另外的一些论文。上周五老师给我讲解了下三篇论文，对ssd内部并行处理，对不同类型的应用请求动态调整闪存资源等有了深入的理解，越了解发现越有意思O(∩_∩)O哈哈~ 欸欸......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-11-26
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#SSDsim" title="SSDsim">SSDsim</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/SSD/ssd_for_improved_performace_and_endurance/">
+        <h2 class="post-title">
+            [SSD Parallel]Multilevel Parallelism
+        </h2>
+        <h3 class="post-subtitle">
+            Exploring and Exploiting the Multilevel Parallelism Inside SSDs for Improved Performance and Endurance
+        </h3>
+        <div class="post-content-preview">
+            
+讨论了使用 die-level 和 plane-level parallelism相关的advanced commands对performance和endurance的影响
+评估了使用与开发四层并行性密切相关的不同分配方案对performance和endurance的影响
+研究了利用SSD中并行性的最优先级
+原文链接
+
+
+
+最近看的paper都是关于SSD结构啦，性能研究啦之类的，仔细去读......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-11-18
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#Multilevel Parallelism" title="Multilevel Parallelism">Multilevel Parallelism</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/SSD/Design_Tradeoffs_for_SSD_Performance/">
+        <h2 class="post-title">
+            [SSD]Design Tradeoffs for SSD Performance
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            本文主要讨论FLASH阵列的组织以及管理逻辑磁盘和物理闪存地址之间的映射所需的算法,是解决围绕SSD逻辑元件的设计和布局的许多重要问题的论文原文链接
+
+
+@Author: Nitin Agrawal，Vijayan Prabhakaran，Ted Wobber…
+@Publiced in: 2008 USENIX Annual Technical Conference, Boston, MA......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-11-14
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Edge-Computing/Trellis/">
+        <h2 class="post-title">
+            [Edge Computing]Trellis
+        </h2>
+        <h3 class="post-subtitle">
+            A Vehicle-based Edge Computing Platform for Transit and Human Mobility Analytics
+        </h3>
+        <div class="post-content-preview">
+            本文介绍一种无线车载监控和跟踪系统，可以跟踪乘客的移动，检测行人流量，并评估外部因素如何影响人员的移动性，从而为运输运营商和潜在的城市规划者提供有用的分析。原文链接
+
+
+@Author: Bozhao Qi, Lei Kang, Suman Banerjee
+@Public in: ACM/IEEE Symposium , 2017 :1-14
+@Present by: Yina Lv, T......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-11-03
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Edge Computing" title="Edge Computing">Edge Computing</a>
+            
+              <a href="/tags/#In-vehicle System" title="In-vehicle System">In-vehicle System</a>
+            
+              <a href="/tags/#Mobile Computing" title="Mobile Computing">Mobile Computing</a>
+            
+              <a href="/tags/#Transit Analytics" title="Transit Analytics">Transit Analytics</a>
+            
+              <a href="/tags/#Human mobility" title="Human mobility">Human mobility</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Graphs/Fast_and_Accurate_Estimation_of_Shortest_Paths/">
+        <h2 class="post-title">
+            [Graph]Shortest Paths
+        </h2>
+        <h3 class="post-subtitle">
+            Fast and Accurate Estimation of Shortest Paths in Large Graphs
+        </h3>
+        <div class="post-content-preview">
+            2010年ACM国际会议文章。本文在前人提出的基于precomputed sketches的距离估计算法基础上，提出了一种快速、准确的最短路径逼近算法。实现误差小、查询时间短，并尽可能地多返回候选路径。原文链接
+
+
+@Authors：Andrey Gubichev, Srikanta Bedathur, Stephan Seufert, Gerhard Weikum
+@Published i......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-10-22
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Graph Databases" title="Graph Databases">Graph Databases</a>
+            
+              <a href="/tags/#Shortest Paths" title="Shortest Paths">Shortest Paths</a>
+            
+              <a href="/tags/#Social Networks" title="Social Networks">Social Networks</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Graphs/Pruned_Labeling_with_Landmarks_and_Paths/">
+        <h2 class="post-title">
+            [Graph]Pruned Labeling with Landmarks and Paths
+        </h2>
+        <h3 class="post-subtitle">
+            Fast and Scalable Reachability Queries on Graphs by Pruned Labeling with Landmarks and Paths
+        </h3>
+        <div class="post-content-preview">
+            2013年在ACM国际会议上发表的文章，关于图上快速可伸缩查询，也就是求最短路径，文中介绍了一种修剪地标标记和修剪路径标记的新索引算法原文链接
+
+@Authors：Yosuke Yano, Takuya Akiba, Yoichi Iwata, Yuichi Yoshida
+@Published in: ACM International Conference on Conference o......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-10-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Graphs" title="Graphs">Graphs</a>
+            
+              <a href="/tags/#query processing" title="query processing">query processing</a>
+            
+              <a href="/tags/#reachability" title="reachability">reachability</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Graph-database/Cypher/">
+        <h2 class="post-title">
+            [Graph]Cypher
+        </h2>
+        <h3 class="post-subtitle">
+            An Evolving Query Language for Property Graph
+        </h3>
+        <div class="post-content-preview">
+            介绍图数据库中属性图的查询语言——Cypher，这是一篇CCF A类文章，发表于数据库顶会SIGMOD，讲得很详细很不错！原文链接
+
+
+@Authors：Nadime Francis，Alastair Green，Paolo Guagliardo
+@Published in: SIGMOD Conference 2018: 1433-1445
+@Presented by: Yina Lv ,......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-10-11
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Graph Database" title="Graph Database">Graph Database</a>
+            
+              <a href="/tags/#Cypher" title="Cypher">Cypher</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Edge-Computing/EdgeComputing_Zenith/">
+        <h2 class="post-title">
+            [Edge Computing] Zenith
+        </h2>
+        <h3 class="post-subtitle">
+            Utility-aware resource allocation in edge computing
+        </h3>
+        <div class="post-content-preview">
+            介绍一种在边缘计算中的共享资源分配模型。 原文链接
+
+@Authors：Jinlai Xu，Balaji Palanisamy，Heiko Ludwig，Qingyang Wang
+@Published in: IEEE International Conference on Edge Computing
+@Presented by: Yina Lv , Time: Qct 10, 2018......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-10-10
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Edge Computing" title="Edge Computing">Edge Computing</a>
+            
+              <a href="/tags/#Zenith" title="Zenith">Zenith</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+        <li class="previous">
+            <a href="/">&larr; Newer Posts</a>
+        </li>
+    
+    
+        <li class="next">
+            <a href="/archives/3/">Older Posts &rarr;</a>
+        </li>
+    
+</ul>
+
+
+
+                <br>
+
+                <!-- require APlayer -->
+                
+
+                <!-- 如果开启评论功能 -->
+                
+            </div>
+
+          <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Featured Tags -->
+
+<section>
+    <!-- no hr -->
+    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#SSD" title="SSD" rel="10">SSD</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#File System" title="File System" rel="2">File System</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#NVMe" title="NVMe" rel="5">NVMe</a>
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</section>
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">ABOUT ME</a></h5>
+    <div class="short-about">
+
+        
+            <img id = "avatar_pic" src="/img/lyn-draw.jpg" />
+        
+
+        
+            <p>Stay hungry,Stay foolish</p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+            
+            
+                <li>
+                    <a target="_blank" href="https://www.zhihu.com/people/mi-tang-gua">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa  fa-stack-1x fa-inverse">知</i>
+                        </span>
+                    </a>
+                </li>
+            
+
+            
+
+            
+
+            
+                <li>
+                    <a target="_blank"  href="https://github.com/elainelv">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+
+   
+                <li>
+                    <a target="_blank"  href="https://blog.csdn.net/sunshine_lyn">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-angellist fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+            
+            
+            
+        </ul>
+    </div>
+</section>
+
+        <hr>
+    
+        
+  <h5>RECENT POSTS</h3>
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/SSD/PA-SSD/">[SSD]PA-SSD</a>
+        </li>
+      
+        <li>
+          <a href="/SSD/SSDcheck/">[SSD Latency]SSDcheck</a>
+        </li>
+      
+        <li>
+          <a href="/NVMe/读NVMe之多路径Multipathing与Namespace Sharing/">[NVMe]读NVMe之Multipathing与Namespace Sharing</a>
+        </li>
+      
+        <li>
+          <a href="/NVMe/读NVMe之IO determinism/">[NVMe]读NVMe之I/O Determinism</a>
+        </li>
+      
+        <li>
+          <a href="/NVMe/读NVMe之PRP与SGL/">[NVMe]读NVMe之PRP与SGL</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+
+    
+        <li><a href="https://blog.csdn.net/sunshine_lyn" target="_blank">CSDN</a></li>
+    
+        <li><a href="https://www.researchgate.net/profile/Yina_Lv" target="_blank">ResearchGate</a></li>
+    
+        <li><a href="https://www.zhihu.com/people/mi-tang-gua/activities" target="_blank">知乎</a></li>
+    
+</ul>
+
+        <hr>
+    
+        
+    <h5>ARCHIVES</h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+        <hr>
+    
+</div>
+
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/mi-tang-gua">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/elainelv">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Lv Yina 2019 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://elainelv.top/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'xxx';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="http://elainelv.top/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
