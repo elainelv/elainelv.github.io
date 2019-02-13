@@ -7,16 +7,24 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8BIO%20determinism/</loc>
-        <lastmod>2019-02-10T07:08:29.181Z</lastmod>
+        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8B%E5%A4%9A%E8%B7%AF%E5%BE%84Multipathing%E4%B8%8ENamespace%20Sharing/</loc>
+        <lastmod>2019-02-13T11:27:23.331Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8B%E5%A4%9A%E8%B7%AF%E5%BE%84Multipathing%E4%B8%8ENamespace%20Sharing/</loc>
-        <lastmod>2019-02-10T07:08:29.112Z</lastmod>
+        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8BDirectives%E4%B8%8EStream/</loc>
+        <lastmod>2019-02-13T07:08:46.026Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8BIO%20determinism/</loc>
+        <lastmod>2019-02-10T07:08:29.181Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

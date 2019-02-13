@@ -145,7 +145,7 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/paperlist/">论文小书单</a>
                         </li>
                         
                     
@@ -166,7 +166,7 @@
 
                         
                         <li>
-                            <a href="/paperlist/">论文小书单</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -226,6 +226,41 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/NVMe/读NVMe之Directives与Stream/">
+        <h2 class="post-title">
+            [NVMe]读NVMe之Directives与Stream
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+对NVMe支持的多流SSD进行整理，虽然在NVMe1.3c中关于这方面的篇幅不长，但还是可以清楚的了解从上层软件到下层设备是如何进行信息交换的
+
+Directives
+
+可以看到在NVMe1.3c的第九章中，讲述了这部分内容。Directives是host和NVM subsystem/controller之间信息交换的机制，实现了SSD设备和上层软件之间的信息交互，而stream只是dir......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-02-10
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
+            
+              <a href="/tags/#Stream" title="Stream">Stream</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -301,9 +336,9 @@
             
         </h3>
         <div class="post-content-preview">
-            占坑！
-
-...
+            multi-path I/O指单个主机和命名空间之间两个或多个完全独立的PCI Express路径，而Namespace Sharing是指两个或多个主机使用不同NVM Express控制器访问命名空间
+可以看出，不管是multi-path I/O还是namespace sharing都要求NVM subsystem包含有两个或者更多的控制器。
+1.图3显示了一个单功能的NVM子系统，它包含......
         </div>
     </a>
     
@@ -530,48 +565,6 @@ PPT
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/参会总结/2018中国存储与数据峰会参会总结/">
-        <h2 class="post-title">
-            [会议]2018中国存储与数据峰会参会总结
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-
-去北京参加了2018中国存储与数据峰会，总得整理一下听的内容呀，供大家了解了解~
-
-12月11日
-中午到达，听了下午的会议，下面挑几个介绍一哈
-1.2018到2022数据中心SSD的新故事
-——Memblaze产品副总裁 张泰乐
-
-张泰乐本人在NVMe、3D NAND 以及全球 SSD 市场发展和演进等多个领域有深入的研究和独到的见解，是不折不扣的业内专家
-
-闪存
-闪存是数据中心存储的未......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-12-14
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#参会总结" title="参会总结">参会总结</a>
-            
-              <a href="/tags/#先进存储技术" title="先进存储技术">先进存储技术</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -617,9 +610,7 @@ PPT
             
         
             
-        
-            
-        
+            <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
             
         
             
@@ -631,12 +622,20 @@ PPT
             
         
             
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
             <a href="/tags/#File System" title="File System" rel="2">File System</a>
             
         
             
-            <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
-            
         
             
         
@@ -671,11 +670,7 @@ PPT
             
         
             
-        
-            
-        
-            
-            <a href="/tags/#NVMe" title="NVMe" rel="5">NVMe</a>
+            <a href="/tags/#NVMe" title="NVMe" rel="6">NVMe</a>
             
         
             
@@ -759,6 +754,10 @@ PPT
     <ul>
       
         <li>
+          <a href="/NVMe/读NVMe之Directives与Stream/">[NVMe]读NVMe之Directives与Stream</a>
+        </li>
+      
+        <li>
           <a href="/SSD/PA-SSD/">[SSD]PA-SSD</a>
         </li>
       
@@ -772,10 +771,6 @@ PPT
       
         <li>
           <a href="/NVMe/读NVMe之IO determinism/">[NVMe]读NVMe之I/O Determinism</a>
-        </li>
-      
-        <li>
-          <a href="/NVMe/读NVMe之PRP与SGL/">[NVMe]读NVMe之PRP与SGL</a>
         </li>
       
     </ul>
@@ -802,7 +797,7 @@ PPT
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -868,10 +863,8 @@ PPT
                 <p class="copyright text-muted">
                     Copyright &copy;  Lv Yina <i class="fa fa-heartbeat"> </i>2019 
                     <br>
-		
-  			
-  			<span class="post-count">博客全站共 {{totalcount(site)}}字</span>
 
+		
 
 
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">

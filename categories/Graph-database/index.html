@@ -145,7 +145,7 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/paperlist/">论文小书单</a>
                         </li>
                         
                     
@@ -166,7 +166,7 @@
 
                         
                         <li>
-                            <a href="/paperlist/">论文小书单</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -226,6 +226,21 @@
                     <span class="tag-text">2019</span>
                 </span>
                 <ul>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <li >
+                    02-10
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <a href="/NVMe/读NVMe之Directives与Stream/" style="color: #0085a1">
+                        <span>
+                            [NVMe]读NVMe之Directives与Stream
+                        </span>
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </li>
                 
                   <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -614,10 +629,8 @@
                 <p class="copyright text-muted">
                     Copyright &copy;  Lv Yina <i class="fa fa-heartbeat"> </i>2019 
                     <br>
-		
-  			
-  			<span class="post-count">博客全站共 {{totalcount(site)}}字</span>
 
+		
 
 
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">

@@ -212,22 +212,29 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/tags/namespace/</loc>
-        <lastmod>2019-02-10T07:08:29.112Z</lastmod>
+        <loc>http://elainelv.top/tags/I-O-determinism/</loc>
+        <lastmod>2019-02-10T07:08:29.181Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/Stream/</loc>
+        <lastmod>2019-02-13T07:08:46.026Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://elainelv.top/tags/NVMe/</loc>
-        <lastmod>2019-02-10T07:08:29.181Z</lastmod>
+        <lastmod>2019-02-13T11:27:23.331Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://elainelv.top/tags/I-O-determinism/</loc>
-        <lastmod>2019-02-10T07:08:29.181Z</lastmod>
+        <loc>http://elainelv.top/tags/namespace/</loc>
+        <lastmod>2019-02-13T11:27:23.331Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
