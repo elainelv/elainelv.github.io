@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://elainelv.top/paperlist/</loc>
+        <lastmod>2019-02-14T13:22:50.112Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://elainelv.top/recommend/</loc>
         <lastmod>2019-02-12T12:49:35.504Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,13 +23,6 @@
     <url>
         <loc>http://elainelv.top/tags/</loc>
         <lastmod>2019-02-12T11:31:11.277Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://elainelv.top/paperlist/</loc>
-        <lastmod>2019-02-12T11:28:54.693Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
