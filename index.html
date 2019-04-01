@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,13 +60,13 @@
     <![endif]-->
 
     <!-- ga & ba script hoook -->
-    <script></script>
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
-	<!-- Modified by Yu-Hsuan Yen -->
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
@@ -138,13 +138,6 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -152,7 +145,7 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -166,7 +159,14 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -226,6 +226,39 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/SSD/FastGC/">
+        <h2 class="post-title">
+            FastGC
+        </h2>
+        <h3 class="post-subtitle">
+            Accelerate Garbage Collection via an Efficient Copyback-based Data Migration in SSDs
+        </h3>
+        <div class="post-content-preview">
+            引子
+我们知道，在闪存设备中，由于数据的非就地更新特性，并采用重映射的page写机制，使得在GC操作时需要先以block为单位进行erase。然而GC耗时且被频繁触发。
+
+在GC过程中，传统基于数据迁移的copyback操作如上述所示，由于ECC纠错机制存在于SSD 控制器中，每次执行copyback操作时，需要将数据从Source Page中读取出来放到cache Register然后一步......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-04-01
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#GC" title="GC">GC</a>
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -533,43 +566,6 @@ multi-stream： 为了改善GC问题，使得具有相......
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/SSD/FStream/">
-        <h2 class="post-title">
-            [Multi-Stream]FStream:Managing Flash Streams in the File System
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            这一篇是前段时间遗留下来没有做完整讲述的paper，今天写了一个详细的博文供大家学习参考！
-讲述的多流技术不同于以往要么是应用级别的分流，也不是块级别的分流，而是文件系统的分流技术。
-FStream: Managing Flash Streams in the File System
-PPT
-
-在看本文前可以先看我之前的博文Multi-Stream SSD，了解一下Multi-Stream ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-12-23
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#Multi-Stream" title="Multi-Stream">Multi-Stream</a>
-            
-              <a href="/tags/#File System" title="File System">File System</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -615,33 +611,29 @@ PPT
             
         
             
-            <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
-            
-        
-            
-        
-            
-            <a href="/tags/#SSD" title="SSD" rel="11">SSD</a>
-            
         
             
         
             
         
             
-        
-            
-        
-            
-        
-            
-        
+            <a href="/tags/#SSD" title="SSD" rel="12">SSD</a>
             
         
             
         
             
             <a href="/tags/#File System" title="File System" rel="2">File System</a>
+            
+        
+            
+            <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
+            
+        
+            
+        
+            
+        
             
         
             
@@ -676,6 +668,12 @@ PPT
         
             
             <a href="/tags/#NVMe" title="NVMe" rel="6">NVMe</a>
+            
+        
+            
+        
+            
+        
             
         
             
@@ -761,6 +759,10 @@ PPT
     <ul>
       
         <li>
+          <a href="/SSD/FastGC/">FastGC</a>
+        </li>
+      
+        <li>
           <a href="/SSD/LDPC-in-SSD/">LDPC in SSD</a>
         </li>
       
@@ -774,10 +776,6 @@ PPT
       
         <li>
           <a href="/SSD/SSDcheck/">[SSD Latency]SSDcheck</a>
-        </li>
-      
-        <li>
-          <a href="/NVMe/读NVMe之多路径Multipathing与Namespace Sharing/">[NVMe]读NVMe之Multipathing与Namespace Sharing</a>
         </li>
       
     </ul>
@@ -802,7 +800,7 @@ PPT
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -870,7 +868,7 @@ PPT
                     <br>
 
 
-<span class="post-count">57.2k words altogether</span>
+<span class="post-count">58.0k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>
@@ -1007,7 +1005,7 @@ PPT
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
 <img src="http://elainelv.top/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
+<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 
