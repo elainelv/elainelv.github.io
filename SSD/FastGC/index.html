@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          FastGC - ElaineLv | ���˲���
+          FastGC - ElaineLv | 个人博客
         
     </title>
 
@@ -155,14 +155,14 @@
 
                         
                         <li>
-                            <a href="/paperlist/">论文小书单</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/paperlist/">论文小书单</a>
                         </li>
                         
                     
@@ -241,7 +241,7 @@
 <img src="/img/article/FastGC/gs1.png" alt=""></p>
 <p>那么，数据传输时间占比为<br>
 <img src="/img/article/FastGC/gs2.png" alt=""></p>
-<p>其中，N<sub>page</sub>代表一个block中的page数目，$\mu$代表当前block中的有效页数目</p>
+<p>其中，N<sub>page</sub>代表一个block中的page数目，\mu代表当前block中的有效页数目</p>
 <p>随着迁移页面的增加，数据传输延迟变得巨大，并极大地影响了GC性能。因此，这种传统的GC虽然确保了数据复制的可靠性，但是其copyback feasibility detection开销很大</p>
 <h3 id="2传统的copyback">2.传统的Copyback</h3>
 <p><img src="/img/article/FastGC/2.png" alt=""></p>
@@ -265,7 +265,7 @@
 <p><img src="/img/article/FastGC/7.png" alt=""></p>
 <h2 id="i-want-to-say">�I want to say�</h2>
 <blockquote>
-<p>这篇文章是关于GC操作的，文章很简单，就是有点细节问题还需要自己研究一哈，GC操作的过程可以分为copyback和erase，本文针对的是GC过程时间开销大，那么主要原因就是在copy back（包括read、transport、program）过程中数据传输时间开销大。而且随着copyback数目的增加，达到一定值后，位出错率显著上升！因此，文章中新颖的idea就在于在SSD Controller中加入了Copyback Feasibility Detector以判别采用哪种方式。</p>
+<p>这篇文章是关于GC操作的，文章很简单，就是有点细节问题还需要自己研究一哈，GC操作的过程可以分为copyback和erase，本文针对的是GC过程时间开销大，那么主要原因就是在copy back（包括read、transport、program）过程中transport时间开销大。而且随着copyback数目的增加，达到一定值后，位出错率显著上升！因此，文章中新颖的idea就在于在SSD Controller中加入了Copyback Feasibility Detector以判别采用哪种方式。</p>
 </blockquote>
 <blockquote>
 <p>emmmm，好久不写博文，今天看了这篇paper，赶紧更新！hhhh</p>
@@ -293,7 +293,7 @@
                             <span class="alipay-code"> <img class="alipay-img" src="/img/alipay.jpg"><b>支付宝打赏</b></span> 
                             <span class="wechat-code"> <img class="wechat-img" src="/img/wechatpay.jpg"><b>微信打赏</b> </span>
                             </span></div>
-                        <p class="reward-notice">����֧�ֽ������Ҽ���������</p>
+                        <p class="reward-notice">您的支持将鼓励我继续创作！</p>
                     </div>
                 
                 <!--打赏-->
