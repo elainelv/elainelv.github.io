@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          [SSD Latency]SSDcheck - ElaineLv | 个人博客
+          [SSD Latency]SSDcheck - ElaineLv | ���˲���
         
     </title>
 
@@ -162,14 +162,14 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -376,7 +376,7 @@ SSDcheck运行框架动态调整上述的性能模型。校准器接收到延迟
 <li>Hybrid PAS将写请求分为NL和HL，Hybrid PAS发送HL给NVM，对于NL请求，基于特定的buffer weight W，随机选择目的地；也就是说，<strong>NVM和SSD处理NL请求的W%和(100%-W)%</strong></li>
 <li>在NVM中的内容周期性的更新</li>
 </ol>
-<h2 id="i-want-to-say">“I want to say”</h2>
+<h2 id="i-want-to-say">�I want to say�</h2>
 <p>最近在看一些关于SSD内部操作而引起的延迟抖动问题，包括之前写的I/O determinism，本文的提出的模型旨在于通过预测的方式调整处理请求的先后顺序<br>
 整篇文章看了三遍，整理了上述内容，还有如下几个问题未解决：</p>
 <ol>
@@ -411,7 +411,7 @@ SSDcheck运行框架动态调整上述的性能模型。校准器接收到延迟
                             <span class="alipay-code"> <img class="alipay-img" src="/img/alipay.jpg"><b>支付宝打赏</b></span> 
                             <span class="wechat-code"> <img class="wechat-img" src="/img/wechatpay.jpg"><b>微信打赏</b> </span>
                             </span></div>
-                        <p class="reward-notice">您的支持将鼓励我继续创作！</p>
+                        <p class="reward-notice">����֧�ֽ������Ҽ���������</p>
                     </div>
                 
                 <!--打赏-->
@@ -472,7 +472,7 @@ SSDcheck运行框架动态调整上述的性能模型。校准器接收到延迟
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#导语"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x5BFC;&#x8BED;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基础知识"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x57FA;&#x7840;&#x77E5;&#x8BC6;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#irregular-behaviors"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Irregular Behaviors</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#来源"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">&#x6765;&#x6E90;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#benefits-of-predicting"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Benefits of Predicting</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#model"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Model</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#use-case"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Use case</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1卷感知逻辑卷管理"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">1.&#x5377;&#x611F;&#x77E5;&#x903B;&#x8F91;&#x5377;&#x7BA1;&#x7406;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2预测感知机制一种基于ssdcheck的io调度机制"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">2.&#x9884;&#x6D4B;&#x611F;&#x77E5;&#x673A;&#x5236;&#xFF08;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;SSDcheck&#x7684;I/O&#x8C03;&#x5EA6;&#x673A;&#x5236;&#xFF09;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ssd-only-pas"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">SSD-only PAS</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#hybrid-pas"><span class="toc-nav-number">5.2.2.</span> <span class="toc-nav-text">Hybrid PAS</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#i-want-to-say"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">&#x201C;I want to say&#x201D;</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#导语"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x5BFC;&#x8BED;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基础知识"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x57FA;&#x7840;&#x77E5;&#x8BC6;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#irregular-behaviors"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Irregular Behaviors</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#来源"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">&#x6765;&#x6E90;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#benefits-of-predicting"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Benefits of Predicting</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#model"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Model</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#use-case"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Use case</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1卷感知逻辑卷管理"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">1.&#x5377;&#x611F;&#x77E5;&#x903B;&#x8F91;&#x5377;&#x7BA1;&#x7406;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2预测感知机制一种基于ssdcheck的io调度机制"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">2.&#x9884;&#x6D4B;&#x611F;&#x77E5;&#x673A;&#x5236;&#xFF08;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;SSDcheck&#x7684;I/O&#x8C03;&#x5EA6;&#x673A;&#x5236;&#xFF09;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ssd-only-pas"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">SSD-only PAS</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#hybrid-pas"><span class="toc-nav-number">5.2.2.</span> <span class="toc-nav-text">Hybrid PAS</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#i-want-to-say"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">&#xFFFD;I want to say&#xFFFD;</span></a></li></ol>
         
         </div>
       </aside>
