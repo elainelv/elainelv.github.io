@@ -155,14 +155,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/paperlist/">论文小书单</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -176,7 +176,7 @@
 
                         
                         <li>
-                            <a href="/paperlist/">论文小书单</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -237,8 +237,8 @@
 <img src="/img/article/FastGC/1.png" alt=""></p>
 <p>在GC过程中，传统基于数据迁移的copyback操作如上述所示，由于ECC纠错机制存在于SSD 控制器中，每次执行copyback操作时，需要将数据从Source Page中读取出来放到cache Register然后一步步传至Data Buffer进行ECC，在ECC中判断如何迁移数据，若存在错误，则通过ECC更正数据并将更正后的数据一步步传回至Destination Page；若不存在错误，那么直接将数据从Cache Register传回至Destination Page。因此，copyback需要一定的<code>时间开销</code>。</p>
 <h3 id="1时间开销大">1.时间开销大</h3>
-<p>其中，执行一个page的copyback操作所需要的时间为</p>
-<p><img src="/img/article/FastGC/gs1.png" alt=""></p>
+<p>其中，执行一个page的copyback操作所需要的时间为<br>
+<img src="/img/article/FastGC/gs1.png" alt=""></p>
 <p>那么，数据传输时间占比为<br>
 <img src="/img/article/FastGC/gs2.png" alt=""></p>
 <p>其中，N<sub>page</sub>代表一个block中的page数目，$\mu$代表当前block中的有效页数目</p>
