@@ -152,14 +152,14 @@
 
                         
                         <li>
-                            <a href="/paperlist/">论文小书单</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/paperlist/">论文小书单</a>
                         </li>
                         
                     
@@ -229,6 +229,76 @@
 
 <div class="post-preview">
 
+    <a href="/Tail-Latency/TinyTailFlash/">
+        <h2 class="post-title">
+            Tiny-Tail Flash
+        </h2>
+        <h3 class="post-subtitle">
+            Near-Perfect Elimination of Garbage Collection Tail Latencies in NAND SSDs
+        </h3>
+        <div class="post-content-preview">
+            
+本文是2017年FAST上的一篇paper，通过避免GC-blocked I/Os来消除GC所带来的尾端延迟。
+
+问题引入SSD并不总是能满足用户期待的性能要求，这正是因为尾端延迟的存在。why is hard to meet SLAs with SSD?
+一个首要的原因就是GC的影响，导致性能的不稳定。由于SSD自身的废旧地更新特点，在使用一段时间之后，系统内部的空闲资源越来越少，这就需......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-05-07
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#GC" title="GC">GC</a>
+            
+              <a href="/tags/#Tail Latency" title="Tail Latency">Tail Latency</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Tail-Latency/MittOS/">
+        <h2 class="post-title">
+            MittOS
+        </h2>
+        <h3 class="post-subtitle">
+            Supporting Millisecond Tail Tolerance with Fast Rejecting SLO-Aware OS Interface
+        </h3>
+        <div class="post-content-preview">
+            
+这是一篇2017年SOSP上的会议文章 paper
+
+问题引入
+解决OS在集群上的QoS问题当一个节点的资源竞争激烈无法满足当前请求时，转而竞争其他不太激烈的节点资源。因此用于解决由于竞争资源导致的等待所带来的尾端延迟问题。
+
+确切地说，当一个application发出I/O请求之后，如果OS的I/O处于繁忙状态，那么此时APP就很有可能需要等待较长的一段时间才能被处理。这篇paper讨论......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-05-07
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Tail Latency" title="Tail Latency">Tail Latency</a>
+            
+              <a href="/tags/#SLO" title="SLO">SLO</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/SSD/FastGC/">
         <h2 class="post-title">
             FastGC
@@ -237,10 +307,8 @@
             Accelerate Garbage Collection via an Efficient Copyback-based Data Migration in SSDs
         </h3>
         <div class="post-content-preview">
-            引子
-我们知道，在闪存设备中，由于数据的非就地更新特性，并采用重映射的page写机制，使得在GC操作时需要先以block为单位进行erase。然而GC耗时且被频繁触发。
-
-在GC过程中，传统基于数据迁移的copyback操作如上述所示，由于ECC纠错机制存在于SSD 控制器中，每次执行copyback操作时，需要将数据从Source Page中读取出来放到cache Register然后一步......
+            引子我们知道，在闪存设备中，由于数据的非就地更新特性，并采用重映射的page写机制，使得在GC操作时需要先以block为单位进行erase。然而GC耗时且被频繁触发。
+在GC过程中，传统基于数据迁移的copyback操作如上述所示，由于ECC纠错机制存在于SSD 控制器中，每次执行copyback操作时，需要将数据从Source Page中读取出来放到cache Register然后一步步传......
         </div>
     </a>
     
@@ -271,9 +339,7 @@
         </h3>
         <div class="post-content-preview">
             
-好久不写了……很想写一篇！
-最近这一个月在忙paper的实验部分，课题是解决上述LDPC引起的严重尾端延迟问题。还没有结束，接下来这段时间也是，可能会很少更新，哭唧唧。
-大概要持续到六月初…那就先占个坑吧，先写写有关于研究LDPC必看的一篇paper，原文链接
+好久不写了……很想写一篇！最近这一个月在忙paper的实验部分，课题是解决上述LDPC引起的严重尾端延迟问题。还没有结束，接下来这段时间也是，可能会很少更新，哭唧唧。大概要持续到六月初…那就先占个坑吧，先写写有关于研究LDPC必看的一篇paper，原文链接
 
 ...
         </div>
@@ -308,9 +374,7 @@
             
 对NVMe支持的多流SSD进行整理，虽然在NVMe1.3c中关于这方面的篇幅不长，但还是可以清楚的了解从上层软件到下层设备是如何进行信息交换的
 
-Directives
-
-可以看到在NVMe1.3c的第九章中，讲述了这部分内容。Directives是host和NVM subsystem/controller之间信息交换的机制，实现了SSD设备和上层软件之间的信息交互，而stream只是dir......
+Directives可以看到在NVMe1.3c的第九章中，讲述了这部分内容。Directives是host和NVM subsystem/controller之间信息交换的机制，实现了SSD设备和上层软件之间的信息交互，而stream只是direc......
         </div>
     </a>
     
@@ -373,8 +437,7 @@ Directives
             本文提出的idea主要用来解决SSD内部不规则行为所导致的响应延迟不一致而影响QoS问题，此问题的存在导致不能很好的展现SSD的高性能、低延迟、低开销优势
 
 导语
-
-现代的SSD不仅仅是一个快速存储设备，而是一个高度复杂的计算机系统，这个复杂的系统有一个嵌入式处理器和多个硬件单元组成，例如，flash cells、channel。嵌入式处理器执行复杂程序以实现非易失性单元的可编程性（例如，读......
+现代的SSD不仅仅是一个快速存储设备，而是一个高度复杂的计算机系统，这个复杂的系统有一个嵌入式处理器和多个硬件单元组成，例如，flash cells、channel。嵌入式处理器执行复杂程序以实现非易失性单元的可编程性（例如，读取......
         </div>
     </a>
     
@@ -404,9 +467,7 @@ Directives
             
         </h3>
         <div class="post-content-preview">
-            multi-path I/O指单个主机和命名空间之间两个或多个完全独立的PCI Express路径，而Namespace Sharing是指两个或多个主机使用不同NVM Express控制器访问命名空间
-可以看出，不管是multi-path I/O还是namespace sharing都要求NVM subsystem包含有两个或者更多的控制器。
-1.图3显示了一个单功能的NVM子系统，它包含......
+            multi-path I/O指单个主机和命名空间之间两个或多个完全独立的PCI Express路径，而Namespace Sharing是指两个或多个主机使用不同NVM Express控制器访问命名空间可以看出，不管是multi-path I/O还是namespace sharing都要求NVM subsystem包含有两个或者更多的控制器。1.图3显示了一个单功能的NVM子系统，它包含一个......
         </div>
     </a>
     
@@ -440,8 +501,7 @@ Directives
 
 NVMe协议族的路线图:
 
-区分multi-stream与I/O determinism？
-multi-stream： 为了改善GC问题，使得具有相......
+区分multi-stream与I/O determinism？multi-stream： 为了改善GC问题，使得具有相同......
         </div>
     </a>
     
@@ -475,8 +535,7 @@ multi-stream： 为了改善GC问题，使得具有相......
 之前两篇博文介绍了SQ、CQ、DB三大命令传输时的重要数据结构。那么本篇博文和大家分享的是两大记录数据在内存位置的方式：PRP和SGL，在对SSD进行读写操作时，需要告诉SSD当前数据在内存的位置。我们知道NVMe1.3 版本中添加了新的功能，在了解了这些基础的内容之后将和大家一起分享目前研究的热点Multi-Stream以及I/O Determinism
 
 
-相关介绍
-在讲正式内容之前，......
+相关介绍在讲正式内容之前，我......
         </div>
     </a>
     
@@ -489,76 +548,6 @@ multi-stream： 为了改善GC问题，使得具有相......
               <a href="/tags/#SSD" title="SSD">SSD</a>
             
               <a href="/tags/#NVMe" title="NVMe">NVMe</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/SSD/RFLUSH/">
-        <h2 class="post-title">
-            [Flush]RFLUSH:Rethink the Flush
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            本文对FLUSH进行块设备接口重构，提出一种RFLUSH命令原文链接
-
-导语
-
-前面多篇paper讲述了HDD和SSD，想必若和我一起学习的小伙伴已经对这方面有一定的了解了，那么对于这两类存储介质，都有易失的缓冲区。其中，HDD的缓冲区可将多个写请求聚合到一起，然后再一并写入到硬盘中，从而减少寻道时间；SSD的缓冲区则是为了优化随机写性能和/或进行磨损均衡，或者也可能是对于Multi-Str......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2019-01-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#FLUSH" title="FLUSH">FLUSH</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/NVMe/读NVMe之DB/">
-        <h2 class="post-title">
-            [NVMe]读NVMe之DB
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            继续上次NVMe的学习，在上次的博文中，我和大家分享了NVMe中的两大重要的角色SQ和CQ，那么在这次的博文中，我们要一起探讨的是第三个重要的角色DB，话不多说！直接进入主题吧~
-
-导语
-
-还没学习过NVMe之SQ与CQ的请戳这里,上次也提到了DB的功能，即host发送命令时，不是直接往SSD中发送命令，而是把准备好的命令放到内存中的SQ，通过写SSD中的DB寄存器来通知SSD,这里再提一哈......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-12-27
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
-            
-              <a href="/tags/#Doorbell Register" title="Doorbell Register">Doorbell Register</a>
             
         </div>
     
@@ -607,16 +596,6 @@ multi-stream： 为了改善GC问题，使得具有相......
     <div class="tags">
         
             
-            <a href="/tags/#SSD" title="SSD" rel="12">SSD</a>
-            
-        
-            
-        
-            
-        
-            
-        
-            
         
             
         
@@ -627,9 +606,31 @@ multi-stream： 为了改善GC问题，使得具有相......
             
         
             
+            <a href="/tags/#SSD" title="SSD" rel="12">SSD</a>
+            
+        
+            
         
             
             <a href="/tags/#File System" title="File System" rel="2">File System</a>
+            
+        
+            
+            <a href="/tags/#GC" title="GC" rel="2">GC</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Tail Latency" title="Tail Latency" rel="2">Tail Latency</a>
+            
+        
+            
+        
+            
+        
             
         
             
@@ -672,10 +673,6 @@ multi-stream： 为了改善GC问题，使得具有相......
         
             
             <a href="/tags/#NVMe" title="NVMe" rel="6">NVMe</a>
-            
-        
-            
-        
             
         
             
@@ -759,6 +756,14 @@ multi-stream： 为了改善GC问题，使得具有相......
     <ul>
       
         <li>
+          <a href="/Tail-Latency/TinyTailFlash/">Tiny-Tail Flash</a>
+        </li>
+      
+        <li>
+          <a href="/Tail-Latency/MittOS/">MittOS</a>
+        </li>
+      
+        <li>
           <a href="/SSD/FastGC/">FastGC</a>
         </li>
       
@@ -768,14 +773,6 @@ multi-stream： 为了改善GC问题，使得具有相......
       
         <li>
           <a href="/NVMe/读NVMe之Directives与Stream/">[NVMe]读NVMe之Directives与Stream</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/PA-SSD/">[SSD]PA-SSD</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/SSDcheck/">[SSD Latency]SSDcheck</a>
         </li>
       
     </ul>
@@ -800,7 +797,7 @@ multi-stream： 为了改善GC问题，使得具有相......
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -868,7 +865,7 @@ multi-stream： 为了改善GC问题，使得具有相......
                     <br>
 
 
-<span class="post-count">58.0k words altogether</span>
+<span class="post-count">61.0k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>

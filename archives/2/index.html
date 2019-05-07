@@ -152,14 +152,14 @@
 
                         
                         <li>
-                            <a href="/paperlist/">论文小书单</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/paperlist/">论文小书单</a>
                         </li>
                         
                     
@@ -229,6 +229,73 @@
 
 <div class="post-preview">
 
+    <a href="/SSD/RFLUSH/">
+        <h2 class="post-title">
+            [Flush]RFLUSH:Rethink the Flush
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            本文对FLUSH进行块设备接口重构，提出一种RFLUSH命令原文链接
+
+导语
+前面多篇paper讲述了HDD和SSD，想必若和我一起学习的小伙伴已经对这方面有一定的了解了，那么对于这两类存储介质，都有易失的缓冲区。其中，HDD的缓冲区可将多个写请求聚合到一起，然后再一并写入到硬盘中，从而减少寻道时间；SSD的缓冲区则是为了优化随机写性能和/或进行磨损均衡，或者也可能是对于Multi-Stre......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-01-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#FLUSH" title="FLUSH">FLUSH</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/NVMe/读NVMe之DB/">
+        <h2 class="post-title">
+            [NVMe]读NVMe之DB
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            继续上次NVMe的学习，在上次的博文中，我和大家分享了NVMe中的两大重要的角色SQ和CQ，那么在这次的博文中，我们要一起探讨的是第三个重要的角色DB，话不多说！直接进入主题吧~
+导语
+还没学习过NVMe之SQ与CQ的请戳这里,上次也提到了DB的功能，即host发送命令时，不是直接往SSD中发送命令，而是把准备好的命令放到内存中的SQ，通过写SSD中的DB寄存器来通知SSD,这里再提一哈，S......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2018-12-27
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
+            
+              <a href="/tags/#Doorbell Register" title="Doorbell Register">Doorbell Register</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/SSD/FStream/">
         <h2 class="post-title">
             [Multi-Stream]FStream:Managing Flash Streams in the File System
@@ -237,12 +304,9 @@
             
         </h3>
         <div class="post-content-preview">
-            这一篇是前段时间遗留下来没有做完整讲述的paper，今天写了一个详细的博文供大家学习参考！
-讲述的多流技术不同于以往要么是应用级别的分流，也不是块级别的分流，而是文件系统的分流技术。
-FStream: Managing Flash Streams in the File System
-PPT
+            这一篇是前段时间遗留下来没有做完整讲述的paper，今天写了一个详细的博文供大家学习参考！讲述的多流技术不同于以往要么是应用级别的分流，也不是块级别的分流，而是文件系统的分流技术。FStream: Managing Flash Streams in the File SystemPPT
 
-在看本文前可以先看我之前的博文Multi-Stream SSD，了解一下Multi-Stream ......
+在看本文前可以先看我之前的博文Multi-Stream SSD，了解一下Multi-Stream SSD......
         </div>
     </a>
     
@@ -308,15 +372,12 @@ PPT
 
 去北京参加了2018中国存储与数据峰会，总得整理一下听的内容呀，供大家了解了解~
 
-12月11日
-中午到达，听了下午的会议，下面挑几个介绍一哈
-1.2018到2022数据中心SSD的新故事
-——Memblaze产品副总裁 张泰乐
+12月11日中午到达，听了下午的会议，下面挑几个介绍一哈
+1.2018到2022数据中心SSD的新故事——Memblaze产品副总裁 张泰乐
 
 张泰乐本人在NVMe、3D NAND 以及全球 SSD 市场发展和演进等多个领域有深入的研究和独到的见解，是不折不扣的业内专家
 
-闪存
-闪存是数据中心存储的未......
+闪存闪存是数据中心存储的未来，从......
         </div>
     </a>
     
@@ -346,14 +407,9 @@ PPT
             
         </h3>
         <div class="post-content-preview">
-            最先由三星公司提出的多流SSD技术，这篇主要介绍多流SSD
-原文链接
-PPT
-作者报告视频
+            最先由三星公司提出的多流SSD技术，这篇主要介绍多流SSD原文链接PPT作者报告视频
 
-
-最近在看Multi-Stream SSD方面的paper，比如上一篇博文中提到的FStream和vStream等等，了解了他们的ideas后，我们也有新的ideas。尝试着改代码！昨晚有了点思绪后，今天改了好多但是后来发现还是存在很多的问题，没法继续改下去了……
-明天去参加2018中国存储与数据峰......
+最近在看Multi-Stream SSD方面的paper，比如上一篇博文中提到的FStream和vStream等等，了解了他们的ideas后，我们也有新的ideas。尝试着改代码！昨晚有了点思绪后，今天改了好多但是后来发现还是存在很多的问题，没法继续改下去了……明天去参加2018中国存储与数据峰会,有时间......
         </div>
     </a>
     
@@ -384,15 +440,12 @@ PPT
         </h3>
         <div class="post-content-preview">
             
-FStream: Managing Flash Streams in the File System
-PPT
-High-Performance Transaction Processing in Journaling File Systems
-PPT
+FStream: Managing Flash Streams in the File SystemPPT
+High-Performance Transaction Processing in Journaling File SystemsPPT
 vStream Virtual Stream Management for Multi-streamed SSDs
 
 
-多流ssd笔记
-对于......
+多流ssd笔记对于GC回......
         </div>
     </a>
     
@@ -461,12 +514,13 @@ vStream Virtual Stream Management for Multi-streamed SSDs
             
 讨论了使用 die-level 和 plane-level parallelism相关的advanced commands对performance和endurance的影响
 评估了使用与开发四层并行性密切相关的不同分配方案对performance和endurance的影响
-研究了利用SSD中并行性的最优先级
-原文链接
+研究了利用SSD中并行性的最优先级原文链接
 
 
 
-最近看的paper都是关于SSD结构啦，性能研究啦之类的，仔细去读......
+
+
+最近看的paper都是关于SSD结构啦，性能研究啦之类的，仔细去......
         </div>
     </a>
     
@@ -499,8 +553,7 @@ vStream Virtual Stream Management for Multi-streamed SSDs
             本文主要讨论FLASH阵列的组织以及管理逻辑磁盘和物理闪存地址之间的映射所需的算法,是解决围绕SSD逻辑元件的设计和布局的许多重要问题的论文原文链接
 
 
-@Author: Nitin Agrawal，Vijayan Prabhakaran，Ted Wobber…
-@Publiced in: 2008 USENIX Annual Technical Conference, Boston, MA......
+@Author: Nitin Agrawal，Vijayan Prabhakaran，Ted Wobber…@Publiced in: 2008 USENIX Annual Technical Conference, Boston, MA,......
         </div>
     </a>
     
@@ -511,83 +564,6 @@ vStream Virtual Stream Management for Multi-streamed SSDs
         <div class="tags">
             
               <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/Edge-Computing/Trellis/">
-        <h2 class="post-title">
-            [Edge Computing]Trellis
-        </h2>
-        <h3 class="post-subtitle">
-            A Vehicle-based Edge Computing Platform for Transit and Human Mobility Analytics
-        </h3>
-        <div class="post-content-preview">
-            本文介绍一种无线车载监控和跟踪系统，可以跟踪乘客的移动，检测行人流量，并评估外部因素如何影响人员的移动性，从而为运输运营商和潜在的城市规划者提供有用的分析。原文链接
-
-
-@Author: Bozhao Qi, Lei Kang, Suman Banerjee
-@Public in: ACM/IEEE Symposium , 2017 :1-14
-@Present by: Yina Lv, T......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-11-03
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Edge Computing" title="Edge Computing">Edge Computing</a>
-            
-              <a href="/tags/#In-vehicle System" title="In-vehicle System">In-vehicle System</a>
-            
-              <a href="/tags/#Mobile Computing" title="Mobile Computing">Mobile Computing</a>
-            
-              <a href="/tags/#Transit Analytics" title="Transit Analytics">Transit Analytics</a>
-            
-              <a href="/tags/#Human mobility" title="Human mobility">Human mobility</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/Graphs/Fast_and_Accurate_Estimation_of_Shortest_Paths/">
-        <h2 class="post-title">
-            [Graph]Shortest Paths
-        </h2>
-        <h3 class="post-subtitle">
-            Fast and Accurate Estimation of Shortest Paths in Large Graphs
-        </h3>
-        <div class="post-content-preview">
-            2010年ACM国际会议文章。本文在前人提出的基于precomputed sketches的距离估计算法基础上，提出了一种快速、准确的最短路径逼近算法。实现误差小、查询时间短，并尽可能地多返回候选路径。原文链接
-
-
-@Authors：Andrey Gubichev, Srikanta Bedathur, Stephan Seufert, Gerhard Weikum
-@Published i......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-10-22
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Graph Databases" title="Graph Databases">Graph Databases</a>
-            
-              <a href="/tags/#Shortest Paths" title="Shortest Paths">Shortest Paths</a>
-            
-              <a href="/tags/#Social Networks" title="Social Networks">Social Networks</a>
             
         </div>
     
@@ -640,16 +616,6 @@ vStream Virtual Stream Management for Multi-streamed SSDs
     <div class="tags">
         
             
-            <a href="/tags/#SSD" title="SSD" rel="12">SSD</a>
-            
-        
-            
-        
-            
-        
-            
-        
-            
         
             
         
@@ -660,9 +626,31 @@ vStream Virtual Stream Management for Multi-streamed SSDs
             
         
             
+            <a href="/tags/#SSD" title="SSD" rel="12">SSD</a>
+            
+        
+            
         
             
             <a href="/tags/#File System" title="File System" rel="2">File System</a>
+            
+        
+            
+            <a href="/tags/#GC" title="GC" rel="2">GC</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Tail Latency" title="Tail Latency" rel="2">Tail Latency</a>
+            
+        
+            
+        
+            
+        
             
         
             
@@ -705,10 +693,6 @@ vStream Virtual Stream Management for Multi-streamed SSDs
         
             
             <a href="/tags/#NVMe" title="NVMe" rel="6">NVMe</a>
-            
-        
-            
-        
             
         
             
@@ -792,6 +776,14 @@ vStream Virtual Stream Management for Multi-streamed SSDs
     <ul>
       
         <li>
+          <a href="/Tail-Latency/TinyTailFlash/">Tiny-Tail Flash</a>
+        </li>
+      
+        <li>
+          <a href="/Tail-Latency/MittOS/">MittOS</a>
+        </li>
+      
+        <li>
           <a href="/SSD/FastGC/">FastGC</a>
         </li>
       
@@ -801,14 +793,6 @@ vStream Virtual Stream Management for Multi-streamed SSDs
       
         <li>
           <a href="/NVMe/读NVMe之Directives与Stream/">[NVMe]读NVMe之Directives与Stream</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/PA-SSD/">[SSD]PA-SSD</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/SSDcheck/">[SSD Latency]SSDcheck</a>
         </li>
       
     </ul>
@@ -833,7 +817,7 @@ vStream Virtual Stream Management for Multi-streamed SSDs
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -901,7 +885,7 @@ vStream Virtual Stream Management for Multi-streamed SSDs
                     <br>
 
 
-<span class="post-count">58.0k words altogether</span>
+<span class="post-count">61.0k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>
