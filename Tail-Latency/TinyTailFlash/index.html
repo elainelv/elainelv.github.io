@@ -155,7 +155,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -169,14 +176,7 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -233,24 +233,39 @@
                 post-container">
 
                 <blockquote>
-<p>本文是2017年FAST上的一篇<a href="https://www.usenix.org/conference/fast17/technical-sessions/presentation/yan" target="_blank" rel="noopener">paper</a>，通过避免GC-blocked I/Os来消除GC所带来的尾端延迟。</p>
+<p>本文是2017年FAST上的一篇<a href="https://www.usenix.org/conference/fast17/technical-sessions/presentation/yan" target="_blank" rel="noopener">paper</a>，通过避免GC-blocked I/Os来消除GC所带来的尾端延迟。</p>
 </blockquote>
-<h4 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h4><p>SSD并不总是能满足用户期待的性能要求，这正是因为尾端延迟的存在。why is hard to meet SLAs with SSD?</p>
+<h4 id="问题引入">问题引入</h4>
+<p>SSD并不总是能满足用户期待的性能要求，这正是因为尾端延迟存在。why is hard to meet SLAs with SSD?</p>
 <p>一个首要的原因就是GC的影响，导致性能的不稳定。由于SSD自身的废旧地更新特点，在使用一段时间之后，系统内部的空闲资源越来越少，这就需要通过GC来回收无效资源。而GC触发时，由于SSD控制器被占用，不能服务用到来的I/Os，因此队列中的I/Os被阻塞。这会带来严重的长延迟，从而影响整体性能。</p>
-<p>目前很多工作是从减少GC的次数入手，但这些方法只是降低了产生这种情况的概率，并没有从根本上去解决。因此本文提出GC-tolerant SSD，从根本上消除了GC带来的long-latency，使得性能保持稳定。——称作<code>TTFlash</code></p>
-<h4 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h4><p>本文提出了五个改进点，实现block-level的部分页并行读取操作。<br>GC所导致的阻塞分为以下几种：<br>1）controller-blocking<br>2）Channel-blocking<br>3）plane-blocking<br><img src="/img/article/TinyTailFlash/image.png" alt=""></p>
-<h5 id="1plane-blocking-gcpb"><a href="#1-Plane-Blocking-GC（PB）" class="headerlink" title="1.Plane-Blocking GC（PB）"></a>1.Plane-Blocking GC（PB）</h5><p>原先一个plane中的block被选中做GC时，其余plane也不能服务I/O请求，这就是controller-blocking。从图中可以感受到，Channel-blocking比controller-blocking要好，因为当一个plane正在做GC操作时，当前plane所在的channel被阻塞了，但是其他channel上的I/O请求还是可以被服务的。但是我们来考虑一下大请求，当一个请求所要读取的数据位于不同的channel上，很可能页位于正被阻塞的channel上，那么此请求仍然不能很好的被处理。而PB则将阻塞控制在一个更为细粒度的plane，因此可以在一定程度上降低GC所带来的性能波动。</p>
+<p>目前很多工作是从减少GC的次数入手，但这些方法只是降低了产生这种情况的概率，并没有从根本上去解决。因此本文提出GC-tolerant SSD，从根本上消除了GC带来的long-latency，使得性能保持稳定。——称作<code>TTFlash</code></p>
+<h4 id="策略">策略</h4>
+<p>本文提出了五个改进点，实现block-level的部分页并行读取操作。<br>
+GC所导致的阻塞分为以下几种：<br>
+1）controller-blocking<br>
+2）Channel-blocking<br>
+3）plane-blocking<br>
+<img src="/img/article/TinyTailFlash/Image.png" alt=""></p>
+<h5 id="1plane-blocking-gcpb">1.Plane-Blocking GC（PB）</h5>
+<p>原先一个plane中的block被选中做GC时，其余plane也不能服务I/O请求，这就是controller-blocking。从图中可以感受到，Channel-blocking比controller-blocking要好，因为当一个plane正在做GC操作时，当前plane所在的channel被阻塞了，但是其他channel上的I/O请求还是可以被服务的。但是我们来考虑一下大请求，当一个请求所要读取的数据位于不同的channel上，很可能页位于正被阻塞的channel上，那么此请求仍然不能很好的被处理。而PB则将阻塞控制在一个更为细粒度的plane，因此可以在一定程度上降低GC所带来的性能波动。</p>
 <p>PB虽好，但也没有完全解决为延迟的问题，处于plane-blocking上的I/O仍不能被服务，要等到当前plane GC完成后才能被处理。</p>
 <p>还有一个值得注意的问题是，随着SSD容量的不断增加，要实现一次GC操作就需要花费更长的时间，因此所带来的延迟也就越长。并且上述方式所带来的另一个问题是当plane需要controller发布下一条命令时，controller可能正在服务于其他channel，那么这也会带来延迟。</p>
-<h5 id="2rain"><a href="#2-RAIN" class="headerlink" title="2.RAIN"></a>2.RAIN</h5><p>针对上述问题，这篇文章又进一步提出了RAIN的概念，主要用于解决那些I/O请求访问GC-ing planes<br><img src="/img/article/TinyTailFlash/image1.png" alt=""></p>
-<p>如上图所示，每个channel相同的位置组成一个条带，一个条带也就是一个plane-group。在每个条带上，根据逻辑地址，相当于每n-1个pages分配一个parity page。这样既可实现当一个条带上的一个plane正在做GC操作时，可以通过其他页和parity page计算出来，从而不需要等待。<br>并且这些parity page是交错着放置，确保hot parity page均匀分布，因此可以实现每个channel的公平性。</p>
-<h5 id="3gc-tolerant-readgtr"><a href="#3-GC-Tolerant-Read（GTR）" class="headerlink" title="3.GC-Tolerant Read（GTR）"></a>3.GC-Tolerant Read（GTR）</h5><p>通过上述方法可以实现GTR，我们计算下开销，parity的计算需要花费3微妙（N小于等于8），额外的parity读取花费40+100微妙，但是这边考虑是读取条带上的所有page，如果只读取少量page，俺么这种方法并不是很好，这需要将其他所有page都读取出来，然后计算出被阻塞的页。因此，我们通过计算GC完成所需要的时间，如果大于上述方法的时间开销时，才采用上述GTR。</p>
-<h5 id="4rotating-gcrgc"><a href="#4-Rotating-GC（RGC）" class="headerlink" title="4.Rotating GC（RGC）"></a>4.Rotating GC（RGC）</h5><p>每个方法都有其不足之处，上述方法仍未解决本质问题。one parity can only cut “one tail”.  Double-parity RAIN is not used due to the larger space overhead.</p>
+<h5 id="2rain">2.RAIN</h5>
+<p>针对上述问题，这篇文章又进一步提出了RAIN的概念，主要用于解决那些I/O请求访问GC-ing planes<br>
+<img src="/img/article/TinyTailFlash/Image1.png" alt=""></p>
+<p>如上图所示，每个channel相同的位置组成一个条带，一个条带也就是一个plane-group。在每个条带上，根据逻辑地址，相当于每n-1个pages分配一个parity page。这样既可实现当一个条带上的一个plane正在做GC操作时，可以通过其他页和parity page计算出来，从而不需要等待。<br>
+并且这些parity page是交错着放置，确保hot parity page均匀分布，因此可以实现每个channel的公平性。</p>
+<h5 id="3gc-tolerant-readgtr">3.GC-Tolerant Read（GTR）</h5>
+<p>通过上述方法可以实现GTR，我们计算下开销，parity的计算需要花费3微妙（N小于等于8），额外的parity读取花费40+100微妙，但是这边考虑是读取条带上的所有page，如果只读取少量page，俺么这种方法并不是很好，这需要将其他所有page都读取出来，然后计算出被阻塞的页。因此，我们通过计算GC完成所需要的时间，如果大于上述方法的时间开销时，才采用上述GTR。</p>
+<h5 id="4rotating-gcrgc">4.Rotating GC（RGC）</h5>
+<p>每个方法都有其不足之处，上述方法仍未解决本质问题。one parity can only cut “one tail”.  Double-parity RAIN is not used due to the larger space overhead.</p>
 <blockquote>
 <p>rotating GC depends on our RAIN layout that ensures every stripe to be statically mapped to a plane group.</p>
 </blockquote>
-<h5 id="5gc-tolerant-flushgtr"><a href="#5-GC-Tolerant-Flush-GTR" class="headerlink" title="5.GC-Tolerant Flush(GTR)"></a>5.GC-Tolerant Flush(GTR)</h5><p>在GC过程中解决写请求的尾端延迟问题，通过buffer，将写请求先缓存起来，然后再通过flush的方式写入ssd。</p>
-<p>通过上述五个策略，本文提出的最优方案可以将尾端延迟控制在极小范围内，只剩下小尾巴<br><img src="/img/article/TinyTailFlash/image2.png" alt=""></p>
+<h5 id="5gc-tolerant-flushgtr">5.GC-Tolerant Flush(GTR)</h5>
+<p>在GC过程中解决写请求的尾端延迟问题，通过buffer，将写请求先缓存起来，然后再通过flush的方式写入ssd。</p>
+<p>通过上述五个策略，本文提出的最优方案可以将尾端延迟控制在极小范围内，只剩下小尾巴<br>
+<img src="/img/article/TinyTailFlash/Image2.png" alt=""></p>
 <blockquote>
 <p>这篇文章是解决GC所导致的尾端延迟，当然在实际过程中，导致尾端延迟的因素有很多个，包括我之前研究的课题LDPC引起的延迟波动，这类话题可以从降低这些情况的概率入手，也可以从避免碰到这类情况入手，当然本质上很难解决，但是在一定程度上通过采取某些措施是可以大大改进性能的！如何才能想到更好的idea来解决，当然是要集思广益啦，读完这篇paper，感觉做学术研究真的还是要一步一步，step by step，针对前一种策略想到后一种策略，继而后一种新的策略又存在新的问题，那么就要继续在此基础之上提出新的策略。可以看到很多paper的实验对比都是这样的。</p>
 </blockquote>
@@ -344,7 +359,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#问题引入"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"><a href="#&#x95EE;&#x9898;&#x5F15;&#x5165;" class="headerlink" title="&#x95EE;&#x9898;&#x5F15;&#x5165;"></a>&#x95EE;&#x9898;&#x5F15;&#x5165;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#策略"><span class="toc-nav-number">2.</span> <span class="toc-nav-text"><a href="#&#x7B56;&#x7565;" class="headerlink" title="&#x7B56;&#x7565;"></a>&#x7B56;&#x7565;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1plane-blocking-gcpb"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text"><a href="#1-Plane-Blocking-GC&#xFF08;PB&#xFF09;" class="headerlink" title="1.Plane-Blocking GC&#xFF08;PB&#xFF09;"></a>1.Plane-Blocking GC&#xFF08;PB&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2rain"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text"><a href="#2-RAIN" class="headerlink" title="2.RAIN"></a>2.RAIN</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3gc-tolerant-readgtr"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text"><a href="#3-GC-Tolerant-Read&#xFF08;GTR&#xFF09;" class="headerlink" title="3.GC-Tolerant Read&#xFF08;GTR&#xFF09;"></a>3.GC-Tolerant Read&#xFF08;GTR&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#4rotating-gcrgc"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text"><a href="#4-Rotating-GC&#xFF08;RGC&#xFF09;" class="headerlink" title="4.Rotating GC&#xFF08;RGC&#xFF09;"></a>4.Rotating GC&#xFF08;RGC&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#5gc-tolerant-flushgtr"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text"><a href="#5-GC-Tolerant-Flush-GTR" class="headerlink" title="5.GC-Tolerant Flush(GTR)"></a>5.GC-Tolerant Flush(GTR)</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#问题引入"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x95EE;&#x9898;&#x5F15;&#x5165;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#策略"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x7B56;&#x7565;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1plane-blocking-gcpb"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1.Plane-Blocking GC&#xFF08;PB&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2rain"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.RAIN</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3gc-tolerant-readgtr"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3.GC-Tolerant Read&#xFF08;GTR&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#4rotating-gcrgc"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">4.Rotating GC&#xFF08;RGC&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#5gc-tolerant-flushgtr"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">5.GC-Tolerant Flush(GTR)</span></a></li></ol></li></ol>
         
         </div>
       </aside>
