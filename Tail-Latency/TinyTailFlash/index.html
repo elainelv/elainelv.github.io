@@ -162,13 +162,6 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/paperlist/">论文小书单</a>
                         </li>
                         
@@ -177,6 +170,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -266,6 +266,7 @@ GC所导致的阻塞分为以下几种：<br>
 <p>在GC过程中解决写请求的尾端延迟问题，通过buffer，将写请求先缓存起来，然后再通过flush的方式写入ssd。</p>
 <p>通过上述五个策略，本文提出的最优方案可以将尾端延迟控制在极小范围内，只剩下小尾巴<br>
 <img src="/img/article/TinyTailFlash/Image2.png" alt=""></p>
+<h4 id="i-want-to-say">“I want to say”</h4>
 <blockquote>
 <p>这篇文章是解决GC所导致的尾端延迟，当然在实际过程中，导致尾端延迟的因素有很多个，包括我之前研究的课题LDPC引起的延迟波动，这类话题可以从降低这些情况的概率入手，也可以从避免碰到这类情况入手，当然本质上很难解决，但是在一定程度上通过采取某些措施是可以大大改进性能的！如何才能想到更好的idea来解决，当然是要集思广益啦，读完这篇paper，感觉做学术研究真的还是要一步一步，step by step，针对前一种策略想到后一种策略，继而后一种新的策略又存在新的问题，那么就要继续在此基础之上提出新的策略。可以看到很多paper的实验对比都是这样的。</p>
 </blockquote>
@@ -275,6 +276,10 @@ GC所导致的阻塞分为以下几种：<br>
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/SSD/SOML/" data-toggle="tooltip" data-placement="top" title="SOML Read">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
@@ -359,7 +364,7 @@ GC所导致的阻塞分为以下几种：<br>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#问题引入"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x95EE;&#x9898;&#x5F15;&#x5165;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#策略"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x7B56;&#x7565;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1plane-blocking-gcpb"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1.Plane-Blocking GC&#xFF08;PB&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2rain"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.RAIN</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3gc-tolerant-readgtr"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3.GC-Tolerant Read&#xFF08;GTR&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#4rotating-gcrgc"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">4.Rotating GC&#xFF08;RGC&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#5gc-tolerant-flushgtr"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">5.GC-Tolerant Flush(GTR)</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#问题引入"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x95EE;&#x9898;&#x5F15;&#x5165;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#策略"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x7B56;&#x7565;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1plane-blocking-gcpb"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1.Plane-Blocking GC&#xFF08;PB&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2rain"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.RAIN</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#3gc-tolerant-readgtr"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3.GC-Tolerant Read&#xFF08;GTR&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#4rotating-gcrgc"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">4.Rotating GC&#xFF08;RGC&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#5gc-tolerant-flushgtr"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">5.GC-Tolerant Flush(GTR)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#i-want-to-say"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">&#x201C;I want to say&#x201D;</span></a></li></ol>
         
         </div>
       </aside>
@@ -522,7 +527,7 @@ GC所导致的阻塞分为以下几种：<br>
                     <br>
 
 
-<span class="post-count">61.0k words altogether</span>
+<span class="post-count">62.6k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>

@@ -152,13 +152,6 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/paperlist/">论文小书单</a>
                         </li>
                         
@@ -167,6 +160,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -226,6 +226,41 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/NVMe/读NVMe之PRP与SGL/">
+        <h2 class="post-title">
+            [NVMe]读NVMe之PRP与SGL
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+之前两篇博文介绍了SQ、CQ、DB三大命令传输时的重要数据结构。那么本篇博文和大家分享的是两大记录数据在内存位置的方式：PRP和SGL，在对SSD进行读写操作时，需要告诉SSD当前数据在内存的位置。我们知道NVMe1.3 版本中添加了新的功能，在了解了这些基础的内容之后将和大家一起分享目前研究的热点Multi-Stream以及I/O Determinism
+
+
+相关介绍
+在讲正式内容之前，......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-01-12
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -556,38 +591,6 @@ vStream Virtual Stream Management for Multi-streamed SSDs
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/SSD/Design_Tradeoffs_for_SSD_Performance/">
-        <h2 class="post-title">
-            [SSD]Design Tradeoffs for SSD Performance
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            本文主要讨论FLASH阵列的组织以及管理逻辑磁盘和物理闪存地址之间的映射所需的算法,是解决围绕SSD逻辑元件的设计和布局的许多重要问题的论文原文链接
-
-
-@Author: Nitin Agrawal，Vijayan Prabhakaran，Ted Wobber…
-@Publiced in: 2008 USENIX Annual Technical Conference, Boston, MA......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-11-14
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -633,8 +636,6 @@ vStream Virtual Stream Management for Multi-streamed SSDs
     <div class="tags">
         
             
-            <a href="/tags/#SSD" title="SSD" rel="12">SSD</a>
-            
         
             
         
@@ -642,6 +643,8 @@ vStream Virtual Stream Management for Multi-streamed SSDs
         
             
         
+            
+            <a href="/tags/#SSD" title="SSD" rel="13">SSD</a>
             
         
             
@@ -651,13 +654,15 @@ vStream Virtual Stream Management for Multi-streamed SSDs
             
         
             
+            <a href="/tags/#GC" title="GC" rel="2">GC</a>
+            
+        
+            
             <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
             
         
             
         
-            
-            <a href="/tags/#GC" title="GC" rel="2">GC</a>
             
         
             
@@ -668,6 +673,8 @@ vStream Virtual Stream Management for Multi-streamed SSDs
         
             
             <a href="/tags/#Tail Latency" title="Tail Latency" rel="2">Tail Latency</a>
+            
+        
             
         
             
@@ -793,6 +800,10 @@ vStream Virtual Stream Management for Multi-streamed SSDs
     <ul>
       
         <li>
+          <a href="/SSD/SOML/">SOML Read</a>
+        </li>
+      
+        <li>
           <a href="/Tail-Latency/TinyTailFlash/">Tiny-Tail Flash</a>
         </li>
       
@@ -806,10 +817,6 @@ vStream Virtual Stream Management for Multi-streamed SSDs
       
         <li>
           <a href="/SSD/LDPC-in-SSD/">LDPC in SSD</a>
-        </li>
-      
-        <li>
-          <a href="/NVMe/读NVMe之Directives与Stream/">[NVMe]读NVMe之Directives与Stream</a>
         </li>
       
     </ul>
@@ -834,7 +841,7 @@ vStream Virtual Stream Management for Multi-streamed SSDs
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -902,7 +909,7 @@ vStream Virtual Stream Management for Multi-streamed SSDs
                     <br>
 
 
-<span class="post-count">61.0k words altogether</span>
+<span class="post-count">62.6k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>

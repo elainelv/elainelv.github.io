@@ -152,13 +152,6 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/paperlist/">论文小书单</a>
                         </li>
                         
@@ -167,6 +160,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -226,6 +226,45 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/SSD/SOML/">
+        <h2 class="post-title">
+            SOML Read
+        </h2>
+        <h3 class="post-subtitle">
+            Rethinking the Read Operation Granularity of 3D NAND SSDs
+        </h3>
+        <div class="post-content-preview">
+            
+4月美国举办的ASPLOS19’上一篇最新的paper，来自Myoungsoo Jung大佬团队
+
+问题引入
+
+1）3D NAND相比于2D NAND具有更高的density，因此同等容量下，3D NAND的chips数量相对就少，降低了chip-level parallelism。这会导致在相同的时间内被处理的请求数量减少，从而导致整个性能的下降。
+
+从图中可以看出，对于read-int......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-05-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#3D NAND" title="3D NAND">3D NAND</a>
+            
+              <a href="/tags/#parallelism" title="parallelism">parallelism</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -534,41 +573,6 @@ multi-stream： 为了改善GC问题，使得具有相......
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/NVMe/读NVMe之PRP与SGL/">
-        <h2 class="post-title">
-            [NVMe]读NVMe之PRP与SGL
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-之前两篇博文介绍了SQ、CQ、DB三大命令传输时的重要数据结构。那么本篇博文和大家分享的是两大记录数据在内存位置的方式：PRP和SGL，在对SSD进行读写操作时，需要告诉SSD当前数据在内存的位置。我们知道NVMe1.3 版本中添加了新的功能，在了解了这些基础的内容之后将和大家一起分享目前研究的热点Multi-Stream以及I/O Determinism
-
-
-相关介绍
-在讲正式内容之前，......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2019-01-12
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -610,8 +614,6 @@ multi-stream： 为了改善GC问题，使得具有相......
     <div class="tags">
         
             
-            <a href="/tags/#SSD" title="SSD" rel="12">SSD</a>
-            
         
             
         
@@ -619,6 +621,8 @@ multi-stream： 为了改善GC问题，使得具有相......
         
             
         
+            
+            <a href="/tags/#SSD" title="SSD" rel="13">SSD</a>
             
         
             
@@ -628,13 +632,15 @@ multi-stream： 为了改善GC问题，使得具有相......
             
         
             
+            <a href="/tags/#GC" title="GC" rel="2">GC</a>
+            
+        
+            
             <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
             
         
             
         
-            
-            <a href="/tags/#GC" title="GC" rel="2">GC</a>
             
         
             
@@ -645,6 +651,8 @@ multi-stream： 为了改善GC问题，使得具有相......
         
             
             <a href="/tags/#Tail Latency" title="Tail Latency" rel="2">Tail Latency</a>
+            
+        
             
         
             
@@ -770,6 +778,10 @@ multi-stream： 为了改善GC问题，使得具有相......
     <ul>
       
         <li>
+          <a href="/SSD/SOML/">SOML Read</a>
+        </li>
+      
+        <li>
           <a href="/Tail-Latency/TinyTailFlash/">Tiny-Tail Flash</a>
         </li>
       
@@ -783,10 +795,6 @@ multi-stream： 为了改善GC问题，使得具有相......
       
         <li>
           <a href="/SSD/LDPC-in-SSD/">LDPC in SSD</a>
-        </li>
-      
-        <li>
-          <a href="/NVMe/读NVMe之Directives与Stream/">[NVMe]读NVMe之Directives与Stream</a>
         </li>
       
     </ul>
@@ -811,7 +819,7 @@ multi-stream： 为了改善GC问题，使得具有相......
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -879,7 +887,7 @@ multi-stream： 为了改善GC问题，使得具有相......
                     <br>
 
 
-<span class="post-count">61.0k words altogether</span>
+<span class="post-count">62.6k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>
