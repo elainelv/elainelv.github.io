@@ -254,20 +254,6 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/tags/Tail-Latency/</loc>
-        <lastmod>2019-05-09T04:00:10.174Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://elainelv.top/tags/SSD/</loc>
-        <lastmod>2019-05-09T04:04:53.868Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://elainelv.top/tags/3D-NAND/</loc>
         <lastmod>2019-05-09T04:04:53.868Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -277,6 +263,27 @@
     <url>
         <loc>http://elainelv.top/tags/parallelism/</loc>
         <lastmod>2019-05-09T04:04:53.868Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/Multi-Queue/</loc>
+        <lastmod>2019-06-04T15:36:12.259Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/SSD/</loc>
+        <lastmod>2019-06-04T15:39:05.681Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/Tail-Latency/</loc>
+        <lastmod>2019-06-04T15:39:05.681Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

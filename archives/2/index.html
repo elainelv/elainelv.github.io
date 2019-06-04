@@ -138,14 +138,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -159,14 +159,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -226,6 +226,107 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/SSD/SSDcheck/">
+        <h2 class="post-title">
+            [SSD Latency]SSDcheck
+        </h2>
+        <h3 class="post-subtitle">
+            Timely and Accurate Prediction of Irregular Behaviors in Black-Box SSDs
+        </h3>
+        <div class="post-content-preview">
+            本文提出的idea主要用来解决SSD内部不规则行为所导致的响应延迟不一致而影响QoS问题，此问题的存在导致不能很好的展现SSD的高性能、低延迟、低开销优势
+
+导语
+
+现代的SSD不仅仅是一个快速存储设备，而是一个高度复杂的计算机系统，这个复杂的系统有一个嵌入式处理器和多个硬件单元组成，例如，flash cells、channel。嵌入式处理器执行复杂程序以实现非易失性单元的可编程性（例如，读......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-01-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#QoS" title="QoS">QoS</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/NVMe/读NVMe之多路径Multipathing与Namespace Sharing/">
+        <h2 class="post-title">
+            [NVMe]读NVMe之Multipathing与Namespace Sharing
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            multi-path I/O指单个主机和命名空间之间两个或多个完全独立的PCI Express路径，而Namespace Sharing是指两个或多个主机使用不同NVM Express控制器访问命名空间
+可以看出，不管是multi-path I/O还是namespace sharing都要求NVM subsystem包含有两个或者更多的控制器。
+1.图3显示了一个单功能的NVM子系统，它包含......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-01-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
+            
+              <a href="/tags/#namespace" title="namespace">namespace</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/NVMe/读NVMe之IO determinism/">
+        <h2 class="post-title">
+            [NVMe]读NVMe之I/O Determinism
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            目前NVMe官网上最新的一个版本是1.3c，也就是我正在看的这个版本，发布于2018年5月24日。而2019年，NVMe1.4版本将是NVMe标准化组织工作重点，此次更新的重点之一就是I/O Determinism——是一把提高QoS的利器！
+
+NVMe协议族的路线图:
+
+区分multi-stream与I/O determinism？
+multi-stream： 为了改善GC问题，使得具有相......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-01-14
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
+            
+              <a href="/tags/#I/O determinism" title="I/O determinism">I/O determinism</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -478,119 +579,6 @@ PPT
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/SSD/两篇有关File_System/">
-        <h2 class="post-title">
-            [Multi-Stream]多流SSD的相关paper
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-FStream: Managing Flash Streams in the File System
-PPT
-High-Performance Transaction Processing in Journaling File Systems
-PPT
-vStream Virtual Stream Management for Multi-streamed SSDs
-
-
-多流ssd笔记
-对于......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-12-05
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#File System" title="File System">File System</a>
-            
-              <a href="/tags/#Muti-stream SSD" title="Muti-stream SSD">Muti-stream SSD</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/SSD/三篇SSD+整理/">
-        <h2 class="post-title">
-            [SSD]最新SSD Paper
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-记录我在阅读SSDsim源码过程中遇到的问题和一些比较重要的知识点
-简要介绍最近阅读的三篇论文所做的工作
-
-
-
-之前写的两篇博文都是介绍了ssd内部结构，并提出方法来提高ssd性能问题。这一礼拜看了ssdsim改进后的源码和另外的一些论文。上周五老师给我讲解了下三篇论文，对ssd内部并行处理，对不同类型的应用请求动态调整闪存资源等有了深入的理解，越了解发现越有意思O(∩_∩)O哈哈~ 欸欸......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-11-26
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#SSDsim" title="SSDsim">SSDsim</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/SSD/ssd_for_improved_performace_and_endurance/">
-        <h2 class="post-title">
-            [SSD Parallel]Multilevel Parallelism
-        </h2>
-        <h3 class="post-subtitle">
-            Exploring and Exploiting the Multilevel Parallelism Inside SSDs for Improved Performance and Endurance
-        </h3>
-        <div class="post-content-preview">
-            
-讨论了使用 die-level 和 plane-level parallelism相关的advanced commands对performance和endurance的影响
-评估了使用与开发四层并行性密切相关的不同分配方案对performance和endurance的影响
-研究了利用SSD中并行性的最优先级
-原文链接
-
-
-
-最近看的paper都是关于SSD结构啦，性能研究啦之类的，仔细去读......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-11-18
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#Multilevel Parallelism" title="Multilevel Parallelism">Multilevel Parallelism</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -644,7 +632,17 @@ vStream Virtual Stream Management for Multi-streamed SSDs
             
         
             
-            <a href="/tags/#SSD" title="SSD" rel="13">SSD</a>
+            <a href="/tags/#SSD" title="SSD" rel="16">SSD</a>
+            
+        
+            
+            <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#Multi-Queue" title="Multi-Queue" rel="2">Multi-Queue</a>
             
         
             
@@ -658,8 +656,6 @@ vStream Virtual Stream Management for Multi-streamed SSDs
             
         
             
-            <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
-            
         
             
         
@@ -668,13 +664,7 @@ vStream Virtual Stream Management for Multi-streamed SSDs
             
         
             
-        
-            
-        
-            
-            <a href="/tags/#Tail Latency" title="Tail Latency" rel="2">Tail Latency</a>
-            
-        
+            <a href="/tags/#Tail Latency" title="Tail Latency" rel="4">Tail Latency</a>
             
         
             
@@ -717,6 +707,8 @@ vStream Virtual Stream Management for Multi-streamed SSDs
         
             
             <a href="/tags/#NVMe" title="NVMe" rel="6">NVMe</a>
+            
+        
             
         
             
@@ -800,23 +792,23 @@ vStream Virtual Stream Management for Multi-streamed SSDs
     <ul>
       
         <li>
+          <a href="/SSD/FLIN/">FLIN</a>
+        </li>
+      
+        <li>
+          <a href="/SSD/Qosaware/">QoS-aware Flash Memory Controller</a>
+        </li>
+      
+        <li>
+          <a href="/SSD/MQFQ/">Multi-Queue Fair Queuing</a>
+        </li>
+      
+        <li>
           <a href="/SSD/SOML/">SOML Read</a>
         </li>
       
         <li>
           <a href="/Tail-Latency/TinyTailFlash/">Tiny-Tail Flash</a>
-        </li>
-      
-        <li>
-          <a href="/Tail-Latency/MittOS/">MittOS</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/FastGC/">FastGC</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/LDPC-in-SSD/">LDPC in SSD</a>
         </li>
       
     </ul>
@@ -841,7 +833,7 @@ vStream Virtual Stream Management for Multi-streamed SSDs
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -909,7 +901,7 @@ vStream Virtual Stream Management for Multi-streamed SSDs
                     <br>
 
 
-<span class="post-count">62.6k words altogether</span>
+<span class="post-count">69.1k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>
