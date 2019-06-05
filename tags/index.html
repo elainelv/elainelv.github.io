@@ -159,14 +159,14 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -236,15 +236,15 @@
                 
                     <a href="#File System" title="File System" rel="2">File System</a>
                 
-                    <a href="#GC" title="GC" rel="2">GC</a>
-                
-                    <a href="#LDPC" title="LDPC" rel="1">LDPC</a>
-                
                     <a href="#Graph Databases" title="Graph Databases" rel="1">Graph Databases</a>
                 
                     <a href="#Shortest Paths" title="Shortest Paths" rel="1">Shortest Paths</a>
                 
                     <a href="#Social Networks" title="Social Networks" rel="1">Social Networks</a>
+                
+                    <a href="#GC" title="GC" rel="2">GC</a>
+                
+                    <a href="#LDPC" title="LDPC" rel="1">LDPC</a>
                 
                     <a href="#Tail Latency" title="Tail Latency" rel="4">Tail Latency</a>
                 
@@ -253,8 +253,6 @@
                     <a href="#TLC_SSD" title="TLC_SSD" rel="1">TLC_SSD</a>
                 
                     <a href="#latency" title="latency" rel="1">latency</a>
-                
-                    <a href="#FLUSH" title="FLUSH" rel="1">FLUSH</a>
                 
                     <a href="#Graphs" title="Graphs" rel="1">Graphs</a>
                 
@@ -265,6 +263,8 @@
                     <a href="#3D NAND" title="3D NAND" rel="1">3D NAND</a>
                 
                     <a href="#parallelism" title="parallelism" rel="1">parallelism</a>
+                
+                    <a href="#FLUSH" title="FLUSH" rel="1">FLUSH</a>
                 
                     <a href="#QoS" title="QoS" rel="1">QoS</a>
                 
@@ -282,15 +282,15 @@
                 
                     <a href="#Multilevel Parallelism" title="Multilevel Parallelism" rel="1">Multilevel Parallelism</a>
                 
+                    <a href="#Muti-stream SSD" title="Muti-stream SSD" rel="1">Muti-stream SSD</a>
+                
                     <a href="#SSDsim" title="SSDsim" rel="1">SSDsim</a>
                 
-                    <a href="#Muti-stream SSD" title="Muti-stream SSD" rel="1">Muti-stream SSD</a>
+                    <a href="#Multi-stream" title="Multi-stream" rel="1">Multi-stream</a>
                 
                     <a href="#NVMe" title="NVMe" rel="6">NVMe</a>
                 
                     <a href="#Doorbell Register" title="Doorbell Register" rel="1">Doorbell Register</a>
-                
-                    <a href="#Multi-stream" title="Multi-stream" rel="1">Multi-stream</a>
                 
                     <a href="#Stream" title="Stream" rel="1">Stream</a>
                 
@@ -526,10 +526,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/SSD/RFLUSH/">
+                     <a href="/SSD/SOML/">
                         <h2 class="post-title">
-                            [Flush]RFLUSH:Rethink the Flush
+                            SOML Read
                         </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Rethinking the Read Operation Granularity of 3D NAND SSDs
+                            </h3>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -541,14 +545,10 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/SSD/SOML/">
+                     <a href="/SSD/RFLUSH/">
                         <h2 class="post-title">
-                            SOML Read
+                            [Flush]RFLUSH:Rethink the Flush
                         </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Rethinking the Read Operation Granularity of 3D NAND SSDs
-                            </h3>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -613,9 +613,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/NVMe/读NVMe之DB/">
+                     <a href="/SSD/多流SSD介绍/">
                         <h2 class="post-title">
-                            [NVMe]读NVMe之DB
+                            [Multi-stream]The Multi-streamed Solid-State Drive
                         </h2>
                         
                     </a>
@@ -628,9 +628,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/SSD/多流SSD介绍/">
+                     <a href="/NVMe/读NVMe之DB/">
                         <h2 class="post-title">
-                            [Multi-stream]The Multi-streamed Solid-State Drive
+                            [NVMe]读NVMe之DB
                         </h2>
                         
                     </a>
@@ -842,77 +842,6 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="GC">
-                    <span class="tag-text">GC</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/SSD/FastGC/">
-                        <h2 class="post-title">
-                            FastGC
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Accelerate Garbage Collection via an Efficient Copyback-based Data Migration in SSDs
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/Tail-Latency/TinyTailFlash/">
-                        <h2 class="post-title">
-                            Tiny-Tail Flash
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Near-Perfect Elimination of Garbage Collection Tail Latencies in NAND SSDs
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="LDPC">
-                    <span class="tag-text">LDPC</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/SSD/LDPC-in-SSD/">
-                        <h2 class="post-title">
-                            LDPC in SSD
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                low-density parity-check (LDPC) code
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="Graph Databases">
                     <span class="tag-text">Graph Databases</span>
                 </span>
@@ -991,9 +920,95 @@
             </div>
             
             <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="GC">
+                    <span class="tag-text">GC</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/SSD/FastGC/">
+                        <h2 class="post-title">
+                            FastGC
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Accelerate Garbage Collection via an Efficient Copyback-based Data Migration in SSDs
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/Tail-Latency/TinyTailFlash/">
+                        <h2 class="post-title">
+                            Tiny-Tail Flash
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Near-Perfect Elimination of Garbage Collection Tail Latencies in NAND SSDs
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="LDPC">
+                    <span class="tag-text">LDPC</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/SSD/LDPC-in-SSD/">
+                        <h2 class="post-title">
+                            LDPC in SSD
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                low-density parity-check (LDPC) code
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="Tail Latency">
                     <span class="tag-text">Tail Latency</span>
                 </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/SSD/MQFQ/">
+                        <h2 class="post-title">
+                            Multi-Queue Fair Queuing
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
                 
                   <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -1008,21 +1023,6 @@
                             <h3 class="post-subtitle">
                                 Supporting Millisecond Tail Tolerance with Fast Rejecting SLO-Aware OS Interface
                             </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/SSD/MQFQ/">
-                        <h2 class="post-title">
-                            Multi-Queue Fair Queuing
-                        </h2>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -1135,28 +1135,6 @@
                             <h3 class="post-subtitle">
                                 A Page-TypeAware TLC SSD for Improved Write/Read Performance and Storage Efficiency
                             </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="FLUSH">
-                    <span class="tag-text">FLUSH</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/SSD/RFLUSH/">
-                        <h2 class="post-title">
-                            [Flush]RFLUSH:Rethink the Flush
-                        </h2>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -1287,6 +1265,28 @@
                             <h3 class="post-subtitle">
                                 Rethinking the Read Operation Granularity of 3D NAND SSDs
                             </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="FLUSH">
+                    <span class="tag-text">FLUSH</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/SSD/RFLUSH/">
+                        <h2 class="post-title">
+                            [Flush]RFLUSH:Rethink the Flush
+                        </h2>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -1504,6 +1504,28 @@
             </div>
             
             <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Muti-stream SSD">
+                    <span class="tag-text">Muti-stream SSD</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/SSD/两篇有关File_System/">
+                        <h2 class="post-title">
+                            [Multi-Stream]多流SSD的相关paper
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="SSDsim">
                     <span class="tag-text">SSDsim</span>
                 </span>
@@ -1526,8 +1548,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Muti-stream SSD">
-                    <span class="tag-text">Muti-stream SSD</span>
+                <span class="fa fa-tag listing-seperator" id="Multi-stream">
+                    <span class="tag-text">Multi-stream</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -1535,9 +1557,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/SSD/两篇有关File_System/">
+                     <a href="/SSD/多流SSD介绍/">
                         <h2 class="post-title">
-                            [Multi-Stream]多流SSD的相关paper
+                            [Multi-stream]The Multi-streamed Solid-State Drive
                         </h2>
                         
                     </a>
@@ -1587,39 +1609,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/NVMe/读NVMe之IO determinism/">
-                        <h2 class="post-title">
-                            [NVMe]读NVMe之I/O Determinism
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
                      <a href="/NVMe/读NVMe之PRP与SGL/">
                         <h2 class="post-title">
                             [NVMe]读NVMe之PRP与SGL
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/NVMe/读NVMe之多路径Multipathing与Namespace Sharing/">
-                        <h2 class="post-title">
-                            [NVMe]读NVMe之Multipathing与Namespace Sharing
                         </h2>
                         
                     </a>
@@ -1642,6 +1634,36 @@
                 </div>
                 <hr>
                 
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/NVMe/读NVMe之IO determinism/">
+                        <h2 class="post-title">
+                            [NVMe]读NVMe之I/O Determinism
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/NVMe/读NVMe之多路径Multipathing与Namespace Sharing/">
+                        <h2 class="post-title">
+                            [NVMe]读NVMe之Multipathing与Namespace Sharing
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
             </div>
             
             <div class="one-tag-list">
@@ -1657,28 +1679,6 @@
                      <a href="/NVMe/读NVMe之DB/">
                         <h2 class="post-title">
                             [NVMe]读NVMe之DB
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Multi-stream">
-                    <span class="tag-text">Multi-stream</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/SSD/多流SSD介绍/">
-                        <h2 class="post-title">
-                            [Multi-stream]The Multi-streamed Solid-State Drive
                         </h2>
                         
                     </a>
@@ -1817,7 +1817,7 @@
                     <br>
 
 
-<span class="post-count">69.1k words altogether</span>
+<span class="post-count">69.5k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>
