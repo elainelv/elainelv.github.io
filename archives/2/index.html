@@ -152,7 +152,7 @@
 
                         
                         <li>
-                            <a href="/paperlist/">论文小书单</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -166,7 +166,7 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/paperlist/">论文小书单</a>
                         </li>
                         
                     
@@ -226,6 +226,106 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/SSD/LDPC-in-SSD/">
+        <h2 class="post-title">
+            LDPC in SSD
+        </h2>
+        <h3 class="post-subtitle">
+            low-density parity-check (LDPC) code
+        </h3>
+        <div class="post-content-preview">
+            
+好久不写了……很想写一篇！
+最近这一个月在忙paper的实验部分，课题是解决上述LDPC引起的严重尾端延迟问题。还没有结束，接下来这段时间也是，可能会很少更新，哭唧唧。
+大概要持续到六月初…那就先占个坑吧，先写写有关于研究LDPC必看的一篇paper，原文链接
+
+...
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-03-30
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#LDPC" title="LDPC">LDPC</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/NVMe/读NVMe之Directives与Stream/">
+        <h2 class="post-title">
+            [NVMe]读NVMe之Directives与Stream
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+对NVMe支持的多流SSD进行整理，虽然在NVMe1.3c中关于这方面的篇幅不长，但还是可以清楚的了解从上层软件到下层设备是如何进行信息交换的
+
+Directives
+
+可以看到在NVMe1.3c的第九章中，讲述了这部分内容。Directives是host和NVM subsystem/controller之间信息交换的机制，实现了SSD设备和上层软件之间的信息交互，而stream只是dir......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-02-10
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
+            
+              <a href="/tags/#Stream" title="Stream">Stream</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/SSD/PA-SSD/">
+        <h2 class="post-title">
+            [SSD]PA-SSD
+        </h2>
+        <h3 class="post-subtitle">
+            A Page-TypeAware TLC SSD for Improved Write/Read Performance and Storage Efficiency
+        </h3>
+        <div class="post-content-preview">
+            在传统的TLC SSD中，不区分page type，因此由于不同的子请求分到的page-types不一样，那么产生的延迟也就不同，而对于一个用户请求来说，需要等到所有的子请求都完成返回之后才算整个请求结束，这就造成写效率非常低。根据存在的这个问题本文提出PA-SSD，将单个用户写请求所分的子请求使用相同的page type进行分配。具体为：对于每个用户请求分配第一个子请求时，根据本文提出的7......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-01-24
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#TLC_SSD" title="TLC_SSD">TLC_SSD</a>
+            
+              <a href="/tags/#latency" title="latency">latency</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -470,115 +570,6 @@ PPT
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/NVMe/读NVMe之SQ与CQ/">
-        <h2 class="post-title">
-            [NVMe]读NVMe之SQ与CQ
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            对NVMe 1.3c的解读，本篇专门讲Submission Queue和Completion Queue，NVMe于2013年提出，是host与SSD之间通信的协议，属于应用层，而与之配合使用的PCIe属于下层，这两者均是为SSD而生的，在之前的HDD时代用的是AHCI和SATA的协议。当然在没有NVMe出现之前，SSD走的也是AHCI和SATA，SATA读取性能最高不会超过600MB/s，......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-12-18
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/参会总结/2018中国存储与数据峰会参会总结/">
-        <h2 class="post-title">
-            [会议]2018中国存储与数据峰会参会总结
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-
-去北京参加了2018中国存储与数据峰会，总得整理一下听的内容呀，供大家了解了解~
-
-12月11日
-中午到达，听了下午的会议，下面挑几个介绍一哈
-1.2018到2022数据中心SSD的新故事
-——Memblaze产品副总裁 张泰乐
-
-张泰乐本人在NVMe、3D NAND 以及全球 SSD 市场发展和演进等多个领域有深入的研究和独到的见解，是不折不扣的业内专家
-
-闪存
-闪存是数据中心存储的未......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-12-14
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#参会总结" title="参会总结">参会总结</a>
-            
-              <a href="/tags/#先进存储技术" title="先进存储技术">先进存储技术</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/SSD/多流SSD介绍/">
-        <h2 class="post-title">
-            [Multi-stream]The Multi-streamed Solid-State Drive
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            最先由三星公司提出的多流SSD技术，这篇主要介绍多流SSD
-原文链接
-PPT
-作者报告视频
-
-
-最近在看Multi-Stream SSD方面的paper，比如上一篇博文中提到的FStream和vStream等等，了解了他们的ideas后，我们也有新的ideas。尝试着改代码！昨晚有了点思绪后，今天改了好多但是后来发现还是存在很多的问题，没法继续改下去了……
-明天去参加2018中国存储与数据峰......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2018-12-10
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#Multi-stream" title="Multi-stream">Multi-stream</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -632,13 +623,17 @@ PPT
             
         
             
-            <a href="/tags/#SSD" title="SSD" rel="16">SSD</a>
-            
-        
-            
             <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
             
         
+            
+        
+            
+            <a href="/tags/#SSD" title="SSD" rel="18">SSD</a>
+            
+        
+            
+            <a href="/tags/#GC" title="GC" rel="2">GC</a>
             
         
             
@@ -658,10 +653,6 @@ PPT
             
         
             
-            <a href="/tags/#GC" title="GC" rel="2">GC</a>
-            
-        
-            
         
             
             <a href="/tags/#Tail Latency" title="Tail Latency" rel="4">Tail Latency</a>
@@ -675,6 +666,18 @@ PPT
         
             
         
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#FS" title="FS" rel="2">FS</a>
             
         
             
@@ -792,23 +795,23 @@ PPT
     <ul>
       
         <li>
+          <a href="/SSD/RASR/">Lessons and Actions</a>
+        </li>
+      
+        <li>
+          <a href="/LSM-KV/SILK/">SILK</a>
+        </li>
+      
+        <li>
+          <a href="/FS/ParaFS/">ParaFS</a>
+        </li>
+      
+        <li>
           <a href="/SSD/FLIN/">FLIN</a>
         </li>
       
         <li>
           <a href="/SSD/Qosaware/">QoS-aware Flash Memory Controller</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/MQFQ/">Multi-Queue Fair Queuing</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/SOML/">SOML Read</a>
-        </li>
-      
-        <li>
-          <a href="/Tail-Latency/TinyTailFlash/">Tiny-Tail Flash</a>
         </li>
       
     </ul>
@@ -833,7 +836,7 @@ PPT
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -901,7 +904,7 @@ PPT
                     <br>
 
 
-<span class="post-count">69.5k words altogether</span>
+<span class="post-count">74.6k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>

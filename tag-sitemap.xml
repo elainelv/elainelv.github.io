@@ -268,13 +268,6 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/tags/SSD/</loc>
-        <lastmod>2019-06-04T15:39:05.681Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://elainelv.top/tags/GC/</loc>
         <lastmod>2019-06-05T11:19:01.212Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -284,6 +277,48 @@
     <url>
         <loc>http://elainelv.top/tags/Tail-Latency/</loc>
         <lastmod>2019-06-05T11:19:01.212Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/Log-Structure/</loc>
+        <lastmod>2019-07-20T12:10:07.141Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/Failure/</loc>
+        <lastmod>2019-07-20T12:28:27.212Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/DFS/</loc>
+        <lastmod>2019-07-20T12:28:27.212Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/SSD/</loc>
+        <lastmod>2019-07-20T12:34:49.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/FS/</loc>
+        <lastmod>2019-07-20T12:34:49.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/tags/LSM-KV/</loc>
+        <lastmod>2019-07-20T12:34:49.074Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

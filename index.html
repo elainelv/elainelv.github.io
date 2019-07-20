@@ -152,7 +152,7 @@
 
                         
                         <li>
-                            <a href="/paperlist/">论文小书单</a>
+                            <a href="/recommend/">推荐阅读</a>
                         </li>
                         
                     
@@ -166,7 +166,7 @@
 
                         
                         <li>
-                            <a href="/recommend/">推荐阅读</a>
+                            <a href="/paperlist/">论文小书单</a>
                         </li>
                         
                     
@@ -226,6 +226,119 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/SSD/RASR/">
+        <h2 class="post-title">
+            Lessons and Actions
+        </h2>
+        <h3 class="post-subtitle">
+            What We Learned from 10K SSD-Related Storage System Failures
+        </h3>
+        <div class="post-content-preview">
+            
+了解大规模生产系统中 Reported As &quot;SSD-Related&quot;（RASR）故障的特点和潜在的根本影响因素，以及SSD的这些错误与系统设计和使用之间的因果关系，为硬件架构师、软件工程师和系统管理员提供一些主要的经验教训以及实际的补救措施。
+发于ATC 2019，原文链接
+
+SSD中的错误非常复杂并且受各种因素的影响，本文是阿里公司团队研究的，实验部署在7个阿里云......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-07-20
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#Failure" title="Failure">Failure</a>
+            
+              <a href="/tags/#DFS" title="DFS">DFS</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/LSM-KV/SILK/">
+        <h2 class="post-title">
+            SILK
+        </h2>
+        <h3 class="post-subtitle">
+            Preventing Latency Spikes in Log-Structured Merge Key-Value Stores
+        </h3>
+        <div class="post-content-preview">
+            ATC 2019，原文链接
+LSM KV
+
+所谓的LSM（log structured-merge tree）是一种日志型结构的树。其中一部分在内存中（写缓存），其余部分在磁盘内。从图中可以看出，从上到下容量不断增加。因此，通过在内存中缓存写请求来提升写性能。
+客户端操作：读、更新或者写；LSM内部的操作：flushing、compaction
+内存中的文件称为memtable；硬盘中的文件......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-07-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SSD" title="SSD">SSD</a>
+            
+              <a href="/tags/#FS" title="FS">FS</a>
+            
+              <a href="/tags/#LSM KV" title="LSM KV">LSM KV</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/FS/ParaFS/">
+        <h2 class="post-title">
+            ParaFS
+        </h2>
+        <h3 class="post-subtitle">
+            A Log-Structured File System to Exploit  the Internal Parallelism of Flash Devices
+        </h3>
+        <div class="post-content-preview">
+            问题：
+当写请求非常密集的时候，闪存内部的并行度并没有很好的利用
+解决下述三方面引起并行冲突的问题：
+
+
+冷热数据分离
+
+
+垃圾回收：FS和FTL中的垃圾收集会发生冲突并破坏性能
+随着通道数的增加，F2FS的擦除闪存块数量增加，GC效率降低
+当日志结构文件系统清理FS级别的一个段时，无效的闪存页实际上分散在多个闪存并行单元上。设备拥有的通道越多，无效页面就越多样化。这降低了FTL中的GC效率......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Lv Yina on
+            2019-07-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Log-Structure" title="Log-Structure">Log-Structure</a>
+            
+              <a href="/tags/#FS" title="FS">FS</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -477,106 +590,6 @@ SSD并不总是能满足用户期待的性能要求，这正是因为尾端延�
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/SSD/LDPC-in-SSD/">
-        <h2 class="post-title">
-            LDPC in SSD
-        </h2>
-        <h3 class="post-subtitle">
-            low-density parity-check (LDPC) code
-        </h3>
-        <div class="post-content-preview">
-            
-好久不写了……很想写一篇！
-最近这一个月在忙paper的实验部分，课题是解决上述LDPC引起的严重尾端延迟问题。还没有结束，接下来这段时间也是，可能会很少更新，哭唧唧。
-大概要持续到六月初…那就先占个坑吧，先写写有关于研究LDPC必看的一篇paper，原文链接
-
-...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2019-03-30
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SSD" title="SSD">SSD</a>
-            
-              <a href="/tags/#LDPC" title="LDPC">LDPC</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/NVMe/读NVMe之Directives与Stream/">
-        <h2 class="post-title">
-            [NVMe]读NVMe之Directives与Stream
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-对NVMe支持的多流SSD进行整理，虽然在NVMe1.3c中关于这方面的篇幅不长，但还是可以清楚的了解从上层软件到下层设备是如何进行信息交换的
-
-Directives
-
-可以看到在NVMe1.3c的第九章中，讲述了这部分内容。Directives是host和NVM subsystem/controller之间信息交换的机制，实现了SSD设备和上层软件之间的信息交互，而stream只是dir......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2019-02-10
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#NVMe" title="NVMe">NVMe</a>
-            
-              <a href="/tags/#Stream" title="Stream">Stream</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/SSD/PA-SSD/">
-        <h2 class="post-title">
-            [SSD]PA-SSD
-        </h2>
-        <h3 class="post-subtitle">
-            A Page-TypeAware TLC SSD for Improved Write/Read Performance and Storage Efficiency
-        </h3>
-        <div class="post-content-preview">
-            在传统的TLC SSD中，不区分page type，因此由于不同的子请求分到的page-types不一样，那么产生的延迟也就不同，而对于一个用户请求来说，需要等到所有的子请求都完成返回之后才算整个请求结束，这就造成写效率非常低。根据存在的这个问题本文提出PA-SSD，将单个用户写请求所分的子请求使用相同的page type进行分配。具体为：对于每个用户请求分配第一个子请求时，根据本文提出的7......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Lv Yina on
-            2019-01-24
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#TLC_SSD" title="TLC_SSD">TLC_SSD</a>
-            
-              <a href="/tags/#latency" title="latency">latency</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -626,13 +639,17 @@ Directives
             
         
             
-            <a href="/tags/#SSD" title="SSD" rel="16">SSD</a>
-            
-        
-            
             <a href="/tags/#Edge Computing" title="Edge Computing" rel="2">Edge Computing</a>
             
         
+            
+        
+            
+            <a href="/tags/#SSD" title="SSD" rel="18">SSD</a>
+            
+        
+            
+            <a href="/tags/#GC" title="GC" rel="2">GC</a>
             
         
             
@@ -652,10 +669,6 @@ Directives
             
         
             
-            <a href="/tags/#GC" title="GC" rel="2">GC</a>
-            
-        
-            
         
             
             <a href="/tags/#Tail Latency" title="Tail Latency" rel="4">Tail Latency</a>
@@ -669,6 +682,18 @@ Directives
         
             
         
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#FS" title="FS" rel="2">FS</a>
             
         
             
@@ -786,23 +811,23 @@ Directives
     <ul>
       
         <li>
+          <a href="/SSD/RASR/">Lessons and Actions</a>
+        </li>
+      
+        <li>
+          <a href="/LSM-KV/SILK/">SILK</a>
+        </li>
+      
+        <li>
+          <a href="/FS/ParaFS/">ParaFS</a>
+        </li>
+      
+        <li>
           <a href="/SSD/FLIN/">FLIN</a>
         </li>
       
         <li>
           <a href="/SSD/Qosaware/">QoS-aware Flash Memory Controller</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/MQFQ/">Multi-Queue Fair Queuing</a>
-        </li>
-      
-        <li>
-          <a href="/SSD/SOML/">SOML Read</a>
-        </li>
-      
-        <li>
-          <a href="/Tail-Latency/TinyTailFlash/">Tiny-Tail Flash</a>
         </li>
       
     </ul>
@@ -827,7 +852,7 @@ Directives
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -895,7 +920,7 @@ Directives
                     <br>
 
 
-<span class="post-count">69.5k words altogether</span>
+<span class="post-count">74.6k words altogether</span>
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   visitors: <span id="busuanzi_value_site_uv"></span>
 </span>

@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>http://elainelv.top/LSM-KV/SILK/</loc>
+        <lastmod>2019-07-20T12:34:49.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/SSD/RASR/</loc>
+        <lastmod>2019-07-20T12:28:27.212Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://elainelv.top/FS/ParaFS/</loc>
+        <lastmod>2019-07-20T12:10:07.141Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://elainelv.top/Tail-Latency/TinyTailFlash/</loc>
         <lastmod>2019-06-05T11:19:01.212Z</lastmod>
         <changefreq>weekly</changefreq>
