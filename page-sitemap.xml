@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://elainelv.top</loc>
+        <loc>http://elainelv.com</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>http://elainelv.top/recommend/</loc>
+        <loc>http://elainelv.com/recommend/</loc>
         <lastmod>2019-02-18T13:42:56.933Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://elainelv.top/paperlist/</loc>
+        <loc>http://elainelv.com/paperlist/</loc>
         <lastmod>2019-02-17T11:24:19.473Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://elainelv.top/tags/</loc>
+        <loc>http://elainelv.com/tags/</loc>
         <lastmod>2019-02-12T11:31:11.277Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://elainelv.top/archive/</loc>
+        <loc>http://elainelv.com/archive/</loc>
         <lastmod>2019-02-12T11:27:59.527Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://elainelv.top/about/</loc>
+        <loc>http://elainelv.com/about/</loc>
         <lastmod>2019-02-12T11:27:26.305Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://elainelv.top/404.html</loc>
+        <loc>http://elainelv.com/404.html</loc>
         <lastmod>2019-02-10T08:56:19.022Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

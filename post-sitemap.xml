@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://elainelv.top</loc>
+        <loc>http://elainelv.com</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/RASR/</loc>
+        <loc>http://elainelv.com/SSD/RASR/</loc>
         <lastmod>2019-07-20T12:39:28.520Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -15,7 +15,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/LSM-KV/SILK/</loc>
+        <loc>http://elainelv.com/LSM-KV/SILK/</loc>
         <lastmod>2019-07-20T12:39:04.102Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -23,7 +23,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/FS/ParaFS/</loc>
+        <loc>http://elainelv.com/FS/ParaFS/</loc>
         <lastmod>2019-07-20T12:10:07.141Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -31,7 +31,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/Tail-Latency/TinyTailFlash/</loc>
+        <loc>http://elainelv.com/Tail-Latency/TinyTailFlash/</loc>
         <lastmod>2019-06-05T11:19:01.212Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -39,7 +39,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/Qosaware/</loc>
+        <loc>http://elainelv.com/SSD/Qosaware/</loc>
         <lastmod>2019-06-04T15:39:05.681Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -47,7 +47,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/MQFQ/</loc>
+        <loc>http://elainelv.com/SSD/MQFQ/</loc>
         <lastmod>2019-06-04T15:36:12.259Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -55,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/FLIN/</loc>
+        <loc>http://elainelv.com/SSD/FLIN/</loc>
         <lastmod>2019-06-04T15:19:41.171Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -63,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/SOML/</loc>
+        <loc>http://elainelv.com/SSD/SOML/</loc>
         <lastmod>2019-05-09T04:04:53.868Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -71,7 +71,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/Tail-Latency/MittOS/</loc>
+        <loc>http://elainelv.com/Tail-Latency/MittOS/</loc>
         <lastmod>2019-05-07T14:32:47.381Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -79,7 +79,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/FastGC/</loc>
+        <loc>http://elainelv.com/SSD/FastGC/</loc>
         <lastmod>2019-04-08T11:37:57.998Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -87,7 +87,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/LDPC-in-SSD/</loc>
+        <loc>http://elainelv.com/SSD/LDPC-in-SSD/</loc>
         <lastmod>2019-03-30T07:56:58.327Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -95,7 +95,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8B%E5%A4%9A%E8%B7%AF%E5%BE%84Multipathing%E4%B8%8ENamespace%20Sharing/</loc>
+        <loc>http://elainelv.com/NVMe/%E8%AF%BBNVMe%E4%B9%8B%E5%A4%9A%E8%B7%AF%E5%BE%84Multipathing%E4%B8%8ENamespace%20Sharing/</loc>
         <lastmod>2019-02-13T11:27:23.331Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -103,7 +103,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8BDirectives%E4%B8%8EStream/</loc>
+        <loc>http://elainelv.com/NVMe/%E8%AF%BBNVMe%E4%B9%8BDirectives%E4%B8%8EStream/</loc>
         <lastmod>2019-02-13T07:08:46.026Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -111,7 +111,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8BIO%20determinism/</loc>
+        <loc>http://elainelv.com/NVMe/%E8%AF%BBNVMe%E4%B9%8BIO%20determinism/</loc>
         <lastmod>2019-02-10T07:08:29.181Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -119,7 +119,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/%E5%A4%9A%E6%B5%81SSD%E4%BB%8B%E7%BB%8D/</loc>
+        <loc>http://elainelv.com/SSD/%E5%A4%9A%E6%B5%81SSD%E4%BB%8B%E7%BB%8D/</loc>
         <lastmod>2019-02-10T07:07:21.041Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -127,7 +127,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/%E4%B8%A4%E7%AF%87%E6%9C%89%E5%85%B3File_System/</loc>
+        <loc>http://elainelv.com/SSD/%E4%B8%A4%E7%AF%87%E6%9C%89%E5%85%B3File_System/</loc>
         <lastmod>2019-02-10T07:07:10.105Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -135,7 +135,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/%E4%B8%89%E7%AF%87SSD+%E6%95%B4%E7%90%86/</loc>
+        <loc>http://elainelv.com/SSD/%E4%B8%89%E7%AF%87SSD+%E6%95%B4%E7%90%86/</loc>
         <lastmod>2019-02-10T07:07:01.171Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -143,7 +143,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8BSQ%E4%B8%8ECQ/</loc>
+        <loc>http://elainelv.com/NVMe/%E8%AF%BBNVMe%E4%B9%8BSQ%E4%B8%8ECQ/</loc>
         <lastmod>2019-02-10T07:06:24.882Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -151,7 +151,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8BPRP%E4%B8%8ESGL/</loc>
+        <loc>http://elainelv.com/NVMe/%E8%AF%BBNVMe%E4%B9%8BPRP%E4%B8%8ESGL/</loc>
         <lastmod>2019-02-10T07:06:09.222Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -159,7 +159,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/NVMe/%E8%AF%BBNVMe%E4%B9%8BDB/</loc>
+        <loc>http://elainelv.com/NVMe/%E8%AF%BBNVMe%E4%B9%8BDB/</loc>
         <lastmod>2019-02-10T07:05:13.294Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -167,7 +167,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/Edge-Computing/Trellis/</loc>
+        <loc>http://elainelv.com/Edge-Computing/Trellis/</loc>
         <lastmod>2019-02-10T07:05:01.096Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -175,7 +175,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/ssd_for_improved_performace_and_endurance/</loc>
+        <loc>http://elainelv.com/SSD/ssd_for_improved_performace_and_endurance/</loc>
         <lastmod>2019-02-10T07:04:42.319Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -183,7 +183,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/RFLUSH/</loc>
+        <loc>http://elainelv.com/SSD/RFLUSH/</loc>
         <lastmod>2019-02-10T07:04:31.823Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -191,7 +191,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/Graphs/Pruned_Labeling_with_Landmarks_and_Paths/</loc>
+        <loc>http://elainelv.com/Graphs/Pruned_Labeling_with_Landmarks_and_Paths/</loc>
         <lastmod>2019-02-10T07:04:21.345Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -199,7 +199,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/PA-SSD/</loc>
+        <loc>http://elainelv.com/SSD/PA-SSD/</loc>
         <lastmod>2019-02-10T07:04:09.974Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -207,7 +207,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linuxdr-1/</loc>
+        <loc>http://elainelv.com/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linuxdr-1/</loc>
         <lastmod>2019-02-10T07:03:59.941Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -215,7 +215,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/FStream/</loc>
+        <loc>http://elainelv.com/SSD/FStream/</loc>
         <lastmod>2019-02-10T07:02:32.137Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -223,7 +223,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/Graphs/Fast_and_Accurate_Estimation_of_Shortest_Paths/</loc>
+        <loc>http://elainelv.com/Graphs/Fast_and_Accurate_Estimation_of_Shortest_Paths/</loc>
         <lastmod>2019-02-10T07:02:18.191Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -231,7 +231,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/Edge-Computing/EdgeComputing_Zenith/</loc>
+        <loc>http://elainelv.com/Edge-Computing/EdgeComputing_Zenith/</loc>
         <lastmod>2019-02-10T07:02:07.167Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -239,7 +239,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/Graph-database/Cypher/</loc>
+        <loc>http://elainelv.com/Graph-database/Cypher/</loc>
         <lastmod>2019-02-10T07:01:40.572Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -247,7 +247,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/Design_Tradeoffs_for_SSD_Performance/</loc>
+        <loc>http://elainelv.com/SSD/Design_Tradeoffs_for_SSD_Performance/</loc>
         <lastmod>2019-02-10T07:01:25.555Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -255,7 +255,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/%E5%8F%82%E4%BC%9A%E6%80%BB%E7%BB%93/2018%E4%B8%AD%E5%9B%BD%E5%AD%98%E5%82%A8%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%B3%B0%E4%BC%9A%E5%8F%82%E4%BC%9A%E6%80%BB%E7%BB%93/</loc>
+        <loc>http://elainelv.com/%E5%8F%82%E4%BC%9A%E6%80%BB%E7%BB%93/2018%E4%B8%AD%E5%9B%BD%E5%AD%98%E5%82%A8%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%B3%B0%E4%BC%9A%E5%8F%82%E4%BC%9A%E6%80%BB%E7%BB%93/</loc>
         <lastmod>2019-02-10T07:00:15.547Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -263,7 +263,7 @@
     </url>
 
     <url>
-        <loc>http://elainelv.top/SSD/SSDcheck/</loc>
+        <loc>http://elainelv.com/SSD/SSDcheck/</loc>
         <lastmod>2019-02-10T06:59:44.466Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
