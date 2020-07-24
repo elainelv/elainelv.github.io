@@ -7,15 +7,15 @@
     </url>
     
     <url>
-        <loc>http://elainelv.com/recommend/</loc>
-        <lastmod>2019-02-18T13:42:56.933Z</lastmod>
+        <loc>http://elainelv.com/paperlist/</loc>
+        <lastmod>2020-07-24T14:39:31.876Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://elainelv.com/paperlist/</loc>
-        <lastmod>2019-02-17T11:24:19.473Z</lastmod>
+        <loc>http://elainelv.com/recommend/</loc>
+        <lastmod>2020-07-24T14:06:42.047Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -30,13 +30,6 @@
     <url>
         <loc>http://elainelv.com/archive/</loc>
         <lastmod>2019-02-12T11:27:59.527Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://elainelv.com/about/</loc>
-        <lastmod>2019-02-12T11:27:26.305Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

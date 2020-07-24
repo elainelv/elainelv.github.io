@@ -2,23 +2,8 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <sitemap>
-        <loc>http://elainelv.com/post-sitemap.xml</loc>
-        <lastmod>2019-07-20T12:39:28.520Z</lastmod>
-    </sitemap>
-
-    <sitemap>
         <loc>http://elainelv.com/page-sitemap.xml</loc>
-        <lastmod>2019-02-18T13:42:56.933Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>http://elainelv.com/category-sitemap.xml</loc>
-        <lastmod>2019-02-10T07:00:15.547Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>http://elainelv.com/tag-sitemap.xml</loc>
-        <lastmod>2019-02-10T06:59:44.466Z</lastmod>
+        <lastmod>2020-07-24T14:39:31.876Z</lastmod>
     </sitemap>
 
 </sitemapindex>
