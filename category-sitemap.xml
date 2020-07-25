@@ -7,71 +7,134 @@
     </url>
 
     <url>
-        <loc>http://elainelv.com/categories/%E5%8F%82%E4%BC%9A%E6%80%BB%E7%BB%93/</loc>
-        <lastmod>2019-02-10T07:00:15.547Z</lastmod>
+        <loc>http://elainelv.com/categories/Failure/</loc>
+        <lastmod>2020-07-25T04:50:34.302Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://elainelv.com/categories/Graph-database/</loc>
-        <lastmod>2019-02-10T07:01:40.572Z</lastmod>
+        <loc>http://elainelv.com/categories/Fairness/</loc>
+        <lastmod>2020-07-25T04:50:34.438Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://elainelv.com/categories/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2019-02-10T07:03:59.941Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://elainelv.com/categories/Graphs/</loc>
-        <lastmod>2019-02-10T07:04:21.345Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://elainelv.com/categories/Edge-Computing/</loc>
-        <lastmod>2019-02-10T07:05:01.096Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://elainelv.com/categories/NVMe/</loc>
-        <lastmod>2019-02-13T11:27:23.331Z</lastmod>
+        <loc>http://elainelv.com/categories/Key-Value/</loc>
+        <lastmod>2020-07-25T04:50:34.546Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://elainelv.com/categories/Tail-Latency/</loc>
-        <lastmod>2019-06-05T11:19:01.212Z</lastmod>
+        <lastmod>2020-07-25T04:50:34.989Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://elainelv.com/categories/FS/</loc>
-        <lastmod>2019-07-20T12:10:07.141Z</lastmod>
+        <loc>http://elainelv.com/categories/File-System/</loc>
+        <lastmod>2020-07-25T04:50:35.022Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://elainelv.com/categories/LSM-KV/</loc>
-        <lastmod>2019-07-20T12:39:04.102Z</lastmod>
+        <loc>http://elainelv.com/categories/LDPC/</loc>
+        <lastmod>2020-07-25T04:50:35.057Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/Linux/</loc>
+        <lastmod>2020-07-25T04:56:10.762Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/Flush/</loc>
+        <lastmod>2020-07-25T04:56:10.993Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://elainelv.com/categories/SSD/</loc>
-        <lastmod>2019-07-20T12:39:28.520Z</lastmod>
+        <lastmod>2020-07-25T04:56:11.076Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/Parallelism/</loc>
+        <lastmod>2020-07-25T04:56:11.116Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/Graphs/</loc>
+        <lastmod>2020-07-25T04:56:11.167Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/SSDsim/</loc>
+        <lastmod>2020-07-25T04:56:11.214Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/Latency/</loc>
+        <lastmod>2020-07-25T04:56:11.254Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/NVMe/</loc>
+        <lastmod>2020-07-25T04:56:11.284Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/QoS/</loc>
+        <lastmod>2020-07-25T04:56:11.311Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/%E5%8F%82%E4%BC%9A%E6%80%BB%E7%BB%93/</loc>
+        <lastmod>2020-07-25T04:56:11.369Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/Multi-Stream/</loc>
+        <lastmod>2020-07-25T04:56:11.407Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/Edge-Computing/</loc>
+        <lastmod>2020-07-25T04:56:11.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://elainelv.com/categories/Graph-Database/</loc>
+        <lastmod>2020-07-25T04:56:11.502Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
