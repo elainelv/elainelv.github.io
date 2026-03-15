@@ -1,5 +1,5 @@
 Hi there 👋
-I work at School of Informatics, Xiamen University as an **Assistant Professor** now in Xiamen, Fujian, China.
+I work at School of Informatics, Xiamen University as an **[Assistant Professor](https://faculty.xmu.edu.cn/lvyina/zh_CN/index.htm)** now in Xiamen, Fujian, China.
 
 I received the B.S. degree in Computer Science and Technology from Ning'bo University and Ph.D. degree in Computer Software and Theory from East China Normal University (ECNU) in the group of [Liang Shi](https://faculty.ecnu.edu.cn/_s16/sl2_13905/main.psp).
 
