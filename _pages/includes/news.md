@@ -3,6 +3,9 @@
 **2026:**
 - _2026.02_: 🎉One paper is accepted by **[ICDE 2026](https://icde2026.github.io/)** (<span style="color:red">**CCF-A**</span>)!
 
+**2025:**
+- _2025.12_: 🎉One tutorial is accepted by **[ICDE 2026](https://icde2026.github.io/)** (<span style="color:red">**CCF-A**</span>)!
+
 **2024:**
 - _2024.4.27~5.1_: Meeting at **[ASPLOS 2024](https://www.asplos-conference.org/asplos2024/)**, San Diego, USA.
 - _2024.1.22~1.25_: Meeting at **[ASP-DAC 2024](https://www.aspdac.com/aspdac2024/welcome/index.html)**, Incheon Songdo Convensia, South Korea.
